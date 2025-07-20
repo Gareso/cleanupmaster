@@ -1,0 +1,392 @@
+/* Custom Docsify Theme */
+
+/* Make the page background exactly the same as the content */
+html,
+body {
+    background-color: #e8e8e8 !important;
+}
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #4d4d4d;
+  border-radius: 4px;
+}
+.sidebar:hover::-webkit-scrollbar-thumb {
+  background: rgb(136, 136, 136);
+}
+.sidebar:hover::-webkit-scrollbar-track {
+  background: rgba(136,136,136,0.4);
+}
+/* Ensure the Docsify content wrapper also covers all leftover space */
+.content {
+    background-color: #e8e8e8 !important;
+}
+
+
+/* Sidebar background and text */
+#sidebar,
+.sidebar {
+    background-color: #1e1e1e;
+}
+
+/* Sidebar links */
+#sidebar a,
+.sidebar-nav a {
+    color: #e84934;
+}
+
+/* Main content background and text */
+.markdown-section,
+#main,
+.content {
+    background-color: #e8e8e8;
+    color: #1a1a1a;
+}
+
+/* Main content links */
+.markdown-section a,
+#main a,
+.content a {
+    color: #e84934;
+    text-decoration: none;
+}
+.markdown-section a:hover {
+  text-decoration: underline !important; /* Adds the underline only on hover */
+}
+
+
+.anchor span {
+    color: #1e1e1e;
+}
+
+
+/* 2) All sidebar links */
+.sidebar ul li a {
+    color: #cd3a12 !important;
+    font-size: 16px;
+}
+
+/* 3) Nested (child) links */
+.sidebar ul li ul li a {
+    color: #e8e8e8 !important;
+    font-size: 14px;
+}
+
+/* 4) Optional: change hover or active if you like */
+.sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 1) Reset all list‐based indenting */
+.sidebar ul,
+.sidebar ul ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2) Make every LI span the full width and be a positioning context */
+.sidebar ul li {
+    margin: 6px 0px 0px 20px !important;
+    /* top/bottom spacing only */
+    position: relative !important;
+}
+
+
+/* 5) Flush‐right active‐item bar */
+.sidebar ul li.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* now truly at the sidebar’s inner edge */
+    width: 4px;
+    /* bar thickness */
+    height: 100%;
+    background: #e84934;
+    /* your chosen accent */
+}
+
+/* Inline snippets: `<code>` inside paragraphs, lists, etc. */
+.markdown-section code {
+    background-color: #ffffff;
+    border-radius: 2px;
+    color: #e84934;
+    font-family: 'Roboto Mono', Monaco, courier, monospace;
+    margin: 0 2px;
+    padding: 3px 5px;
+    white-space: pre-wrap;
+}
+
+section.cover {
+    /* your SVG */
+    background-image: url('assets/frame.svg') !important;
+
+    /* no tiling */
+    background-repeat: no-repeat !important;
+
+    /* center it */
+    background-position: center center !important;
+
+    /* fill the whole area (cropping if needed) */
+    background-size: cover !important;
+
+    background-size: 100% 100% !important;  
+    z-index: 100;
+}
+
+/* -------------------------------------------------- */
+/* Hide the navbar whenever the cover is showing      */
+/* -------------------------------------------------- */
+#app:has(> section.cover.show) .app-nav {
+    display: none !important;
+}
+
+.app-nav a {
+    color: #4d4d4d;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* ----------------------------------------- */
+/* Navbar styling for links inside the <p>   */
+/* ----------------------------------------- */
+
+/* 1) Make the paragraph a flex container, use gap */
+.app-nav p {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 1.5rem !important;
+    /* space between each button */
+    margin: 0 !important;
+    /* kill any theme margins */
+    padding: 0 !important;
+}
+
+/* 2) Force link color and remove extra text-dec */
+.app-nav p>a {
+
+    text-decoration: none !important;
+    /* If you want a hover style, add it here: */
+}
+
+/* Hide the GitHub corner icon */
+.github-corner {
+    display: none !important;
+}
+
+/* Resize the sidebar logo */
+.sidebar>h1 img {
+    max-width: 90%;
+    /* or whatever width you prefer */
+    height: auto;
+    /* preserve aspect ratio */
+    display: block;
+    /* remove any inline spacing */
+    margin: 0 auto 1rem;
+    /* center it and add a bit of bottom space */
+}
+
+
+/* Responsive YouTube embeds */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    margin: 1.5em 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+
+/* restyle all Markdown horizontal rules */
+.markdown-section hr {
+    border: none;
+    /* remove default border */
+    height: 1px;
+    /* set your own thickness */
+    background-color: #bdbdbd;
+    /* your chosen accent color */
+    margin: 2em 0;
+    /* vertical spacing above/below */
+}
+
+
+/* ------------------------------- */
+/* Navbar behind the sidebar + flush right */
+/* ------------------------------- */
+
+/* 1) Base fixed nav: full-height divider, no margin */
+.app-nav {
+    
+    top: 0 !important;
+    margin: 0 !important;
+    /* kill default theme margins */
+    padding: 14.5px 1rem !important;
+   
+
+    z-index: 1 !important;
+    /* below sidebar (which is z-index:20 by default) */
+}
+
+/* 2) When sidebar is visible, push nav to content area */
+body:not(.close) .app-nav {
+    left: 300px !important;
+    /* match your .sidebar width */
+    right: 0 !important;
+    /* flush to the viewport’s right edge */
+}
+
+/* 3) When sidebar is hidden, let nav span full width */
+body.close .app-nav {
+    left: 0 !important;
+    right: 0 !important;
+}
+
+/* On small screens where the sidebar is hidden, make the navbar span full width */
+@media screen and (max-width: 768px) {
+  .app-nav {
+    left: 0 !important;
+    right: 0 !important;
+  }
+  body:not(.close) .app-nav {
+    left: 0px !important;
+    /* match your .sidebar width */
+    right: 0 !important;
+    /* flush to the viewport’s right edge */
+}
+}
+
+
+
+/* Style only that intro paragraph on the cover */
+section.cover.show .cover-main p.cover-intro {
+    color: #e84934;
+    /* light grey */
+    font-weight: bold;
+    /* bold */
+    margin-bottom: 0.5em;
+    /* less space to next line */
+    font-size: 1.8rem;
+    /* optional: bump size if you like */
+}
+
+/* -------------------------------------------------- */
+/* Constrain and box the cover description text       */
+/* -------------------------------------------------- */
+section.cover.show .cover-main p.cover-description {
+    max-width: 500px;
+    /* limit line length */
+    margin: 1em auto;
+    /* center and add vertical space */
+    text-align: center;
+    /* center the text (optional) */
+}
+
+
+/* Make every cover-page button filled (no more outline-only) */
+section.cover .cover-main>p:last-child a {
+    /* Use your theme color here (or var(--theme-color)) */
+    background-color: #e84934 !important;
+    border: 1px solid #e84934 !important;
+    color: #fff !important;
+}
+
+/* Change cover buttons’ hover color */
+section.cover .cover-main>p:last-child a:hover {
+    background-color: #ffffff !important;
+    /* your hover fill color */
+    border-color: #ffffff !important;
+    /* match border to fill */
+    color: #1e1e1e !important;
+    /* keep text white */
+    opacity: 1 !important;
+    /* reset any opacity tweaks */
+}
+
+/* 1) Change the global theme color from green to e84934 */
+:root {
+  --theme-color: #e84934;
+}
+
+/* 2) Ensure the search input focus ring uses your red */
+.search input[type="search"]:focus {
+  outline: none !important;
+  border-color: #e84934 !important;
+  box-shadow: 0 0 0 2px rgba(232, 73, 52, 0.5) !important;
+}
+
+/* 3) Match highlights in the dropdown to your red */
+.search .search-keyword {
+  color: #e84934 !important;
+}
+
+/* 4) When hovering clear-icon or suggestion items */
+.search a:hover {
+  color: #e84934 !important;
+}
+
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section strong {
+  color: #1e1e1e;
+  font-weight: 600;
+}
+
+.markdown-section {
+    padding-top: 60px; /* Adjust this value! */
+    /* You might also need to adjust existing padding or margin properties if they conflict */
+}
+
+.markdown-section pre > code {
+  background-color: #d5d5d5;
+  border-radius: 15px;
+  color: #1e1e1e;
+  padding: 1.2em 15px;
+  white-space: pre-wrap;
+  border: 1px solid #a9a9a9;
+}
+
+.markdown-section pre {
+  background-color: transparent;
+  padding: 0;
+}
+
+.markdown-section figure, .markdown-section p, .markdown-section ul, .markdown-section ol {
+    margin: 0.2em 0;
+}
+
+.markdown-section ol li::marker {
+  color: #e84934; /* Your desired color (orange/red) */
+  font-weight: bold; /* Make the numbers bold */
+  font-size: 1.1em;  /* Slightly increase the size of the numbers */
+  /* You can add other properties like font-family, etc. */
+}
+
+/* If you also want to style unordered list bullets */
+.markdown-section ul li::marker {
+  color: #e84934; /* Example color for bullets */
+  font-size: 1.2em;
+}
+
+.sidebar ul > li > ul > li > ul > li > a {
+  color: #8e8e8e !important;
+  font-size: 13px;
+  padding-left: 5px;
+}
+
+.sidebar ul > li > ul > li > ul > li.active > a {
+  color: #8e8e8e;
+  font-weight: 600;
+}
