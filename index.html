@@ -51,40 +51,39 @@
   <div id="app"></div>
 
   <script>
-    const FIXED_NAVBAR_HEIGHT = 60; // <--- CONFIRM THIS IS YOUR EXACT NAVBAR HEIGHT!
+    const FIXED_NAVBAR_HEIGHT = 60;
 
-    // --- YouTube Player Global Variable ---
     var player;
+    var playerIsReady = false;
+    var pendingChapterTime = null;
 
-    // --- YouTube Player Functions ---
-    // This is called by the YouTube IFrame API when its script is loaded.
-    // We will *not* initialize the player here directly, but set a flag or call a Docsify hook.
-    // Instead, we'll call initializeYouTubePlayer() from Docsify's doneEach hook.
     window.onYouTubeIframeAPIReady = function() {
         console.log('YouTube IFrame API script has finished loading.');
-        // The API is ready, but the iframe might not be in the DOM yet due to Docsify.
-        // The actual player initialization will happen via Docsify's hook.
     };
 
     function onPlayerReady(event) {
       console.log('YouTube Player is ready to be controlled!');
-      // Optional: event.target.playVideo();
+      playerIsReady = true;
+
+      if (pendingChapterTime !== null) {
+        console.log(`Player is now ready. Executing pending seek to ${pendingChapterTime}.`);
+        seekToChapter(pendingChapterTime); // This will now call itself with the 'ready' state
+        pendingChapterTime = null;
+      }
     }
 
     function onPlayerError(event) {
       console.error('YouTube Player Error:', event.data);
-      // Helpful error codes: 100 (not found), 101/150 (embedding disabled)
     }
 
-    // This function initializes the YouTube player.
-    // It will be called *after* Docsify has rendered the content.
     function initializeYouTubePlayer() {
         const youtubePlayerElement = document.getElementById('youtubePlayer');
         if (youtubePlayerElement && typeof YT !== 'undefined' && YT.Player) {
-            // Destroy existing player if navigating between Docsify pages
             if (player && typeof player.destroy === 'function') {
                 player.destroy();
-                player = null; // Clear the player variable
+                player = null;
+                playerIsReady = false;
+                pendingChapterTime = null;
                 console.log('Existing YouTube player destroyed before re-initialization.');
             }
 
@@ -100,15 +99,20 @@
         }
     }
 
-    // This function is called by your chapter links' onclick events
+    // THIS IS THE UPDATED FUNCTION
     function seekToChapter(seconds) {
-      if (player && typeof player.seekTo === 'function') {
-        console.log(`Seeking to ${seconds} seconds...`);
+      console.log(`--- seekToChapter called for ${seconds} seconds ---`);
+      console.log(`playerIsReady: ${playerIsReady}`);
+      console.log(`player object exists: ${!!player}`); // Check if player is truthy
+      console.log(`typeof player.seekTo: ${typeof player.seekTo}`); // Check type of seekTo
+
+      if (playerIsReady && player && typeof player.seekTo === 'function') {
+        console.log(`Executing seek to ${seconds} seconds.`);
         player.seekTo(seconds, true);
         player.playVideo();
       } else {
-        console.error('YouTube player not ready or seekTo function not available. Check iframe ID and API loading.');
-        console.log('Current player object:', player);
+        console.warn(`Youtubeer not yet ready for commands. Queuing seek to ${seconds}.`);
+        pendingChapterTime = seconds;
       }
     }
     // --- End YouTube Player Functions ---

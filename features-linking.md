@@ -1,22 +1,15 @@
 # Linking Tools
-<img
-  src="assets/UI_linking.svg"
-  alt="Linking Tools"
-  width="1000"
-  style="max-width:600px; height:auto; align: center;"
-/>
 ---
+<h4  id="parent" style="display: flex; align-items: center; gap: 10px;">
+  <img src="assets/bt-parent.svg" width="50" style="max-width: 50px;" />
+  <span>1. Parent Shape Groups to Null</span>
+</h4>
 <img
   src="assets/gifs/parent.gif"
   alt="Visibility Tools"
   width="1000"
   style="max-width:400px; height:auto; align: center;"
 />
-
-<h4  id="parent" style="display: flex; align-items: center; gap: 10px;">
-  <img src="assets/bt-parent.svg" width="50" style="max-width: 50px;" />
-  <span>1. Parent Shape Groups to Null</span>
-</h4>
 
 This function allows you to parent shape groups to a null, from within any shape layer.
 
@@ -32,22 +25,20 @@ This function allows you to parent shape groups to a null, from within any shape
   style="max-width:400px; height:auto; align: center;"
 />
 
-4. Enjoy!
-
 ```
 💡 TIP: Use this function to add details to your character and speed up cleanup by reusing animations from other elements.
 ```
 ---
+<h4  id="nulls" style="display: flex; align-items: center; gap: 10px;">
+  <img src="assets/bt-null.svg" width="50" style="max-width: 50px;" />
+  <span>2. Create Nulls to Follow Points</span>
+</h4>
 <img
   src="assets/gifs/create_nulls.gif"
   alt="Visibility Tools"
   width="1000"
   style="max-width:400px; height:auto; align: center;"
 />
-<h4  id="nulls" style="display: flex; align-items: center; gap: 10px;">
-  <img src="assets/bt-null.svg" width="50" style="max-width: 50px;" />
-  <span>2. Create Nulls to Follow Points</span>
-</h4>
 
 Similar to the traditional Create Nulls to Follow Points script, with a few key differences:
 - Create Nulls for selected points only
