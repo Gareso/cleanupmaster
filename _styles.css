@@ -279,6 +279,7 @@ section.cover .cover-main>p:last-child a:hover {
   outline: none !important;
   border-color: #e84934 !important;
   box-shadow: 0 0 0 2px rgba(232, 73, 52, 0.5) !important;
+  z-index: 100;
 }
 
 /* 3) Match highlights in the dropdown to your red */
@@ -301,8 +302,7 @@ section.cover .cover-main>p:last-child a:hover {
 }
 
 .markdown-section {
-    padding-top: 60px; /* Adjust this value! */
-    /* You might also need to adjust existing padding or margin properties if they conflict */
+    padding-top: 60px; 
 }
 
 .markdown-section pre > code {
@@ -354,4 +354,9 @@ section.cover .cover-main>p:last-child a:hover {
     display: block;  
     margin: 20px auto;
 }
-
+@media screen and (max-width: 768px) {
+    .markdown-section {
+        max-width: none;
+        padding: 60px 30px 0 30px;
+    }
+}
