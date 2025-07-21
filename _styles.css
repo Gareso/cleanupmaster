@@ -222,51 +222,6 @@ body {
 }
 
 
-/* ------------------------------- */
-/* Navbar behind the sidebar + flush right */
-/* ------------------------------- */
-
-/* 1) Base fixed nav: full-height divider, no margin */
-.app-nav {
-    
-    top: 0 !important;
-    margin: 0 !important;
-    /* kill default theme margins */
-    padding: 14.5px 1rem !important;
-   
-
-    z-index: 1 !important;
-    /* below sidebar (which is z-index:20 by default) */
-}
-
-/* 2) When sidebar is visible, push nav to content area */
-body:not(.close) .app-nav {
-    left: 300px !important;
-    /* match your .sidebar width */
-    right: 0 !important;
-    /* flush to the viewport’s right edge */
-}
-
-/* 3) When sidebar is hidden, let nav span full width */
-body.close .app-nav {
-    left: 0 !important;
-    right: 0 !important;
-}
-
-/* On small screens where the sidebar is hidden, make the navbar span full width */
-@media screen and (max-width: 768px) {
-  .app-nav {
-    left: 0 !important;
-    right: 0 !important;
-  }
-  body:not(.close) .app-nav {
-    left: 0px !important;
-    /* match your .sidebar width */
-    right: 0 !important;
-    /* flush to the viewport’s right edge */
-}
-}
-
 
 
 /* Style only that intro paragraph on the cover */
