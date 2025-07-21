@@ -1,15 +1,18 @@
 # Tutorials
----
-### Tool Overview
+--- 
+<div class="video-responsive">
 <iframe id="youtubePlayer"
-  width="800" height="450"
   src="https://www.youtube.com/embed/6V1BtRUz6Os?enablejsapi=1&origin=https://cleanupmaster.gareso.com"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   referrerpolicy="strict-origin-when-cross-origin"
   allowfullscreen>
 </iframe>
-<div class="media_table" style="margin-top: 5px; padding: 0 25px 0 25px;">
+</div>
+
+### Tool Overview - Chapters:
+
+<div class="media_table" style="margin-top: 25px; padding: 0 25px 0 25px;">
 <div class="media_table_cell" style="background-color: white; border-radius: 8px; padding: 20px; border: 1px solid #cccccc; margin: 0px;">
     <ul>
       <li><a href="javascript:void(0)" onclick="seekToChapter(3);">01.  <span style="color: #1e1e1e;">Interface</span></a></li>
