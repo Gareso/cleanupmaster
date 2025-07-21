@@ -363,3 +363,119 @@ section.cover .cover-main>p:last-child a:hover {
         padding-top: 60px;
     }
 }
+
+.sidebar-toggle {
+    position: fixed !important; /* Make sure it's positioned relative to the viewport */
+    top: 0 !important;          /* Align to the very top */
+    left: 0 !important;         /* Align to the very left */
+    bottom: auto !important;    /* Reset bottom position if it was set */
+    right: auto !important;     /* Reset right position */
+    padding: 15px 15px 15px 15px !important; /* Adjust padding for better spacing */
+    background-color: transparent !important; /* Make background transparent */
+    border: none !important;    /* Remove any border */
+    box-shadow: none !important; /* Remove any shadow */
+    z-index: 999 !important;    /* Ensure it's above other content */
+    color: var(--docsify-theme-text-color, #34495e) !important; /* Inherit or set text color */
+    cursor: pointer;
+    font-size: 24px; /* Adjust icon size if needed */
+    line-height: 1; /* Prevent extra space around icon */
+}
+
+/* Optional: Adjust main content area to prevent overlap on small screens */
+@media screen and (max-width: 768px) {
+    .markdown-section {
+        padding-left: 55px !important; /* Give space for the button on the left */
+    }
+}
+
+
+/* custom.css */
+
+/* --- Existing CSS for Sidebar Toggle (from previous answer) --- */
+.sidebar-toggle {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: auto !important;
+    right: auto !important;
+    
+    padding: 15px !important; /* Adjust if your toggle size changes */
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 999 !important;
+    color: var(--docsify-theme-text-color, #34495e) !important;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+}
+/* --- End existing CSS for Sidebar Toggle --- */
+
+
+/* --- New/Modified CSS for Search Bar --- */
+.docsify-sidebar .search {
+    position: fixed; /* Keep it fixed so it scrolls with the page */
+    top: 55px; /* Adjust this value: height of toggle (approx 50px) + desired gap */
+    left: 0;
+    width: 100%; /* Take full width */
+    background-color: var(--docsify-theme-navbar-background, #fff); /* Match navbar background or your preference */
+    padding: 10px 20px; /* Adjust padding as needed */
+    box-sizing: border-box; /* Include padding in width */
+    z-index: 990; /* Lower than toggle (999), higher than content */
+    border-bottom: 1px solid var(--docsify-theme-border-color, #eee); /* Optional border */
+}
+
+/* Adjust the input field within the search container */
+.docsify-sidebar .search input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Adjust the main content area and sidebar padding to account for fixed elements */
+/* We need to push content down by the combined height of toggle + search */
+.content, .sidebar {
+    /* Calculate total height:
+       Toggle height: ~50px (24px font-size + 15px top/bottom padding)
+       Search height: ~50px (8px input padding + 10px top/bottom container padding + border)
+       Total: ~100px + any desired gap
+    */
+    padding-top: 35px !important; /* Adjust this value carefully based on your exact heights */
+}
+
+/* Optional: If you have a top navbar, you'll need to move it further down or hide it */
+.docsify-navbar {
+    display: none; /* Hide if you don't want a top navbar with this layout */
+    /* OR reposition it further down: */
+    /* top: 105px !important; */
+    /* z-index: 980 !important; */
+}
+
+/* --- Mobile Adjustments (important!) --- */
+@media screen and (max-width: 768px) {
+    /* Ensure toggle remains at top-left */
+    .sidebar-toggle {
+        /* Already defined above, just ensure no conflicts */
+        z-index: 1000 !important; /* Make sure it's highest on mobile too */
+    }
+
+    /* Adjust search bar for mobile */
+    .docsify-sidebar .search {
+        top: 55px; /* Same top value as desktop for consistency */
+        width: 100%;
+        left: 0;
+        z-index: 990;
+    }
+
+    /* On mobile, Docsify typically moves the sidebar to the left with an overlay. */
+    /* Ensure the sidebar itself doesn't conflict with the fixed elements when open. */
+    /* This might require testing and further adjustments depending on exact theme. */
+    .sidebar {
+        padding-top: 35px !important; /* Push internal sidebar content down too */
+        /* If sidebar opens as an overlay, its initial position might not need 'top' adjustment,
+           but its internal content will to avoid being covered. */
+    }
+}
