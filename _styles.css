@@ -221,7 +221,12 @@ body {
     /* vertical spacing above/below */
 }
 
-
+/* --- HIDE NAV BAR ON MOBILE WHEN SIDEBAR IS OPEN --- */
+  @media screen and (max-width: 768px) { /* Docsify's typical mobile breakpoint */
+      html.show-sidebar .app-nav {
+          display: none !important; /* Hide the navbar completely */
+      }
+  }
 
 
 /* Style only that intro paragraph on the cover */
