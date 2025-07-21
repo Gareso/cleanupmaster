@@ -118,22 +118,23 @@ body {
     white-space: pre-wrap;
 }
 
-section.cover {
-    /* your SVG */
-    background-image: url('assets/frame.svg') !important;
+ section.cover {
+      /* Common properties for both orientations */
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: 100% 100% !important; /* Stretches to fill exactly 100% width and height, distorting if needed */
+      z-index: 100;
 
-    /* no tiling */
-    background-repeat: no-repeat !important;
+      /* Default background image (e.g., for landscape orientation or desktop) */
+      background-image: url('assets/frame.svg') !important;
+  }
 
-    /* center it */
-    background-position: center center !important;
-
-    /* fill the whole area (cropping if needed) */
-    background-size: cover !important;
-
-    background-size: 100% 100% !important;  
-    z-index: 100;
-}
+  /* Media query to apply portrait-specific background image */
+  @media (orientation: portrait) {
+      section.cover {
+          background-image: url('assets/frame-portrait.svg') !important;
+      }
+  }
 
 /* -------------------------------------------------- */
 /* Hide the navbar whenever the cover is showing      */
@@ -274,9 +275,12 @@ section.cover.show .cover-main p.cover-intro {
     /* light grey */
     font-weight: bold;
     /* bold */
-    margin-bottom: 0.5em;
+    margin: 0.5em;
+    padding-left: 25px;
+    padding-right: 25px;
     /* less space to next line */
     font-size: 1.8rem;
+    line-height: 1.1em;
     /* optional: bump size if you like */
 }
 
@@ -284,9 +288,10 @@ section.cover.show .cover-main p.cover-intro {
 /* Constrain and box the cover description text       */
 /* -------------------------------------------------- */
 section.cover.show .cover-main p.cover-description {
-    max-width: 500px;
+    max-width: 520px;
     /* limit line length */
     margin: 1em auto;
+    padding: 20px;
     /* center and add vertical space */
     text-align: center;
     /* center the text (optional) */
@@ -389,5 +394,13 @@ section.cover .cover-main>p:last-child a:hover {
 .sidebar ul > li > ul > li > ul > li.active > a {
   color: #8e8e8e;
   font-weight: 600;
+}
+
+.responsive-logo {
+    width: 80%;      
+    max-width: 600px; 
+    height: auto;    
+    display: block;  
+    margin: 20px auto;
 }
 

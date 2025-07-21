@@ -1,4 +1,4 @@
-![logo](assets/cleanupMaster.svg ':size=40%')
+![logo](assets/cleanupMaster.svg ':class=responsive-logo')
 
 <p class="cover-intro">
   Frame-by-frame Cleanup Toolbar for After Effects.
