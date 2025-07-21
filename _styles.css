@@ -148,7 +148,16 @@ body {
 /* Navbar styling for links inside the <p>   */
 /* ----------------------------------------- */
 
-
+/* 1) Make the paragraph a flex container, use gap */
+.app-nav p {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 1.5rem !important;
+    /* space between each button */
+    margin: 0 !important;
+    /* kill any theme margins */
+    padding: 0 !important;
+}
 
 /* 2) Force link color and remove extra text-dec */
 .app-nav p>a {

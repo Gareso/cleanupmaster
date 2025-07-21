@@ -145,49 +145,7 @@
       sidebarDisplayLevel: 1,
       subMaxLevel: 1,
       logo:        'assets/cleanupMaster.svg',
-      plugins: [
-        function(hook) {
-          const toggleNav = () => {
-            const nav   = document.querySelector('.app-nav');
-            const cover = document.querySelector('section.cover.show');
-            if (nav) nav.style.display = cover ? 'none' : '';
-          };
-          hook.init(toggleNav);
-          hook.doneEach(toggleNav);
-
-          // === Docsify Scroll Adjustment for Fixed Header ===
-          hook.afterEach(function() {
-            const hash = window.location.hash;
-            if (hash) {
-              setTimeout(() => {
-                const targetElement = document.getElementById(hash.substring(1));
-                if (targetElement) {
-                  const targetRect = targetElement.getBoundingClientRect();
-                  const scrollContainer = document.body;
-                  const targetScrollTop = scrollContainer.scrollTop + targetRect.top - FIXED_NAVBAR_HEIGHT;
-
-                  scrollContainer.scrollTo({
-                    top: targetScrollTop,
-                    behavior: 'smooth'
-                  });
-                }
-              }, 200);
-            }
-          });
-          // === End Docsify Scroll Adjustment ===
-
-          // === Docsify Plugin for YouTube Player Initialization ===
-          // This is the crucial part for your setup!
-          hook.doneEach(function() {
-            // This hook runs *after* Docsify has fetched and rendered the content for the current page.
-            // Give a small delay to ensure the DOM is fully settled, then try to initialize the player.
-            setTimeout(() => {
-                initializeYouTubePlayer();
-            }, 250); // Small delay to ensure iframe is fully rendered
-          });
-          // === End Docsify Plugin ===
-        }
-      ]
+     
     };
   </script>
 
