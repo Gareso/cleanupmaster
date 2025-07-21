@@ -137,6 +137,8 @@ body {
   }
 .app-nav {
 margin:10px 25px;
+position: absolute;
+z-index: 1;
 }
 
 .app-nav a {
@@ -301,9 +303,7 @@ section.cover .cover-main>p:last-child a:hover {
   font-weight: 600;
 }
 
-.markdown-section {
-    padding-top: 60px; 
-}
+
 
 .markdown-section pre > code {
   background-color: #d5d5d5;
@@ -358,5 +358,8 @@ section.cover .cover-main>p:last-child a:hover {
     .markdown-section {
         max-width: none;
         padding: 60px 30px 0 30px;
+    }
+    .content {
+        padding-top: 60px;
     }
 }
