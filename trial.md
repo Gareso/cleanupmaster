@@ -7,14 +7,14 @@
   src="assets/gifs/trial-page.jpg"
   alt="Cleanup Master UI"
   width="400px"
-  style="max-width:400px; height:auto;"
+  style="max-width:100%; height:auto;"
 />
 <br><br>
 2. Or you can use the [aescripts + aeplugins Manager](https://aescripts.com/learn/aescripts-aeplugins-manager-app/), going to the "Account" menu (top-bar) and selecting "Cleanup Master" on the list and install. <br>
 [  <img
     src="assets/gifs/aescripts-aeplugins-manager.jpg"
     alt="Cleanup Master UI"
-    width="400px"
+    width="100%"
     style="max-width:500px; height:auto;"
   />](https://aescripts.com/learn/aescripts-aeplugins-manager-app/)
 <img

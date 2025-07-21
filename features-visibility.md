@@ -2,7 +2,7 @@
 <img
   src="assets/gifs/solo-hide.gif"
   alt="Visibility Tools"
-  width="1000"
+  width="100%"
   style="max-width:400px; height:auto; align: center;"
 />
 

@@ -384,7 +384,7 @@ section.cover .cover-main>p:last-child a:hover {
 /* Optional: Adjust main content area to prevent overlap on small screens */
 @media screen and (max-width: 768px) {
     .markdown-section {
-        padding-left: 55px !important; /* Give space for the button on the left */
+        padding-left: 40px !important; /* Give space for the button on the left */
     }
 }
 

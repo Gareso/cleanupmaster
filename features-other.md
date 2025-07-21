@@ -6,7 +6,7 @@
 </h4>
 <img
   src="assets/gifs/renaming.gif"
-  width="1000"
+  width="100%"
   style="max-width:650px; height:auto; align: center;"
 />
 
@@ -21,7 +21,7 @@
 <img
   src="assets/gifs/stacking.gif"
   alt="Visibility Tools"
-  width="1000"
+  width="100%"
   style="max-width:400px; height:auto; align: center;"
 />
 
@@ -61,7 +61,7 @@
 <img
   src="assets/gifs/delete.gif"
   alt="Visibility Tools"
-  width="1000"
+  width="100%"
   style="max-width:400px; height:auto; align: center;"
 />
 
@@ -73,7 +73,7 @@
 <img
   src="assets/gifs/masks.gif"
   alt="Visibility Tools"
-  width="1000"
+  width="100%"
   style="max-width:650px; height:auto; align: center;"
 />
 
@@ -85,7 +85,7 @@
 <img
   src="assets/gifs/shade.gif"
   alt="Visibility Tools"
-  width="1000"
+  width="100%"
   style="max-width:650px; height:auto; align: center;"
 />
 

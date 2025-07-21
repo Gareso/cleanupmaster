@@ -4,7 +4,7 @@
 <img
   src="assets/UI_visibility.svg"
   alt="Visibility Tools"
-  width="1000"
+  width="100%"
   style="max-width:600px; height:auto; align: center;"
 />
 
@@ -16,7 +16,7 @@
 <img
   src="assets/UI_linking.svg"
   alt="Linking Tools"
-  width="1000"
+  width="100%"
   style="max-width:600px; height:auto; align: center;"
 />
 
@@ -28,7 +28,7 @@
 <img
   src="assets/UI_othertools.svg"
   alt="Linking Tools"
-  width="1000"
+  width="100%"
   style="max-width:600px; height:auto; align: center;"
 />
 

@@ -7,7 +7,7 @@
 <img
   src="assets/gifs/parent.gif"
   alt="Visibility Tools"
-  width="1000"
+  width="100%"
   style="max-width:400px; height:auto; align: center;"
 />
 
@@ -21,7 +21,7 @@ This function allows you to parent shape groups to a null, from within any shape
 
 <img
   src="assets/gifs/parent_dialog.jpg"
-  width="1000"
+  width="100%"
   style="max-width:400px; height:auto; align: center;"
 />
 
@@ -36,7 +36,7 @@ This function allows you to parent shape groups to a null, from within any shape
 <img
   src="assets/gifs/create_nulls.gif"
   alt="Visibility Tools"
-  width="1000"
+  width="100%"
   style="max-width:400px; height:auto; align: center;"
 />
 
@@ -47,7 +47,7 @@ Similar to the traditional Create Nulls to Follow Points script, with a few key 
 
 <img
   src="assets/gifs/pointSlider.jpg"
-  width="1000"
+  width="100%"
   style="max-width:400px; height:auto; align: center;"
 />
 
@@ -64,7 +64,7 @@ Similar to the traditional Trace Path script: it creates a Null that moves aroun
 
 <img
   src="assets/gifs/angle_control.jpg"
-  width="1000"
+  width="100%"
   style="max-width:400px; height:auto; align: center;"
 />
 
