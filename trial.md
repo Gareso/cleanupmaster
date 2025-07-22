@@ -31,3 +31,5 @@ The trial version includes the following limitations:
 - 10 days
 - Maximum of <strong>5 non-null layers</strong> in the same comp
 - Maximum of <strong>40 keyframes</strong> in a comp
+
+To remove all limitations, please purchase Cleanup Master.

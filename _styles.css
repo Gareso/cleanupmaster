@@ -479,3 +479,33 @@ section.cover .cover-main>p:last-child a:hover {
            but its internal content will to avoid being covered. */
     }
 }
+
+.markdown-section table td {
+  padding: 1.5em 1em; /* adjust top/bottom and left/right */
+}
+
+.markdown-section table th {
+  background-color: #1e1e1e !important;
+  color: #fff;
+}
+
+/* odd data rows */
+.markdown-section table tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+/* even data rows */
+.markdown-section table tr:nth-child(even) td {
+  background-color: #f3f3f3;
+}
+
+.markdown-section table .alert-note {
+  background-color: #eaeaea;
+  border-style: solid;
+  border-color:#bdbdbd;
+  color: #e84934;
+  padding: .6em 1em;
+  border-radius: 4px;
+  margin-top: 0.5em;
+  display: inline-block;
+}
