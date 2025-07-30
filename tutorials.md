@@ -10,7 +10,7 @@
 </iframe>
 </div>
 
-### Tool Overview - Chapters:
+### Tool Overview - Chapters: 
 
 <div class="media_table" style="margin-top: 25px; padding: 0 25px 0 25px;">
 <div class="media_table_cell" style="background-color: white; border-radius: 8px; padding: 20px; border: 1px solid #cccccc; margin: 0px;">

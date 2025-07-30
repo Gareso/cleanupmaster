@@ -13,7 +13,14 @@
   <span>1. Solo Selected Shapes</span>
 </h4>
 
-Temporarily isolates the selected paths by hiding all others in the same layer. Works with either a point selection in the comp-viewer or a direct selection in the timeline.
+This button has double function:
+
+| Modifier       | Function | Action                       |
+| ------------- | :--------: | --------------------------- |
+| -      |    Solo    | Temporarily isolates the selected paths by hiding all others in the same layer. Works with either a point selection in the comp-viewer or a direct selection in the timeline.   |
+| OPT/ALT |   Select all Points     | Selects all points in the selected paths for easier editing. |
+
+
 
 **Use this to:**
 

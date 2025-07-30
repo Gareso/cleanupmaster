@@ -18,6 +18,7 @@ This button has double function:
 | ------------- | :--------: | --------------------------- |
 | -      |    Renamer    | <img src="assets/gifs/renamer-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/><br><br>Renames selected Shapes Groups and all other layers/expressions that references it.<br> If more than one shape or layer is selected, the function will append "01,02,03..." to the names.<br> <div class="alert-note"> ⚠️ The shape group names need to be unique for the renamer to work fully. If names are not unique, expressions and other layers won’t be updated. </div>    |
 | OPT/ALT |   Selector     | Reads a point selection in the comp viewer and selects the Shape Groups and keyframed properties related to it.<br><br> Double-tap `SS` on your keyboard to reveal and isolate the selected properties in the timeline.|
+| CMD/CTRL |   Group Shapes     | Groups the selected shapes together. Type the name of the new group in the dialog.<br> <div class="alert-note"> ⚠️ Grouping shapes that have inverted opacity pairs, linked nulls or any other expression related function will break connections. </div>|
 
 
 ```
