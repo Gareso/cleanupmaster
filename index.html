@@ -71,8 +71,31 @@
     var playerIsReady = false;
     var pendingChapterTime = null;
 
+    // added: make sure iframe src matches current origin and has enablejsapi=1
+    function fixIframeOrigin() {
+      var el = document.getElementById('youtubePlayer');
+      if (!el) return;
+      try {
+        var url = new URL(el.src, window.location.href);
+        // ensure enablejsapi=1
+        if (url.searchParams.get('enablejsapi') !== '1') {
+          url.searchParams.set('enablejsapi', '1');
+        }
+        // lock origin to the actual page origin so it works on local/dev too
+        url.searchParams.set('origin', window.location.origin);
+        var newSrc = url.toString();
+        if (el.src !== newSrc) {
+          el.src = newSrc;
+          console.log('Updated iframe src to match origin:', newSrc);
+        }
+      } catch (e) {
+        console.warn('Could not adjust iframe origin', e);
+      }
+    }
+
     window.onYouTubeIframeAPIReady = function() {
         console.log('YouTube IFrame API script has finished loading.');
+        initializeYouTubePlayer(); // call init as soon as API is ready
     };
 
     function onPlayerReady(event) {
@@ -80,8 +103,8 @@
       playerIsReady = true;
 
       if (pendingChapterTime !== null) {
-        console.log(`Player is now ready. Executing pending seek to ${pendingChapterTime}.`);
-        seekToChapter(pendingChapterTime); // This will now call itself with the 'ready' state
+        console.log('Player is now ready. Executing pending seek to ' + pendingChapterTime + '.');
+        seekToChapter(pendingChapterTime); // This will now call itself with the ready state
         pendingChapterTime = null;
       }
     }
@@ -92,12 +115,16 @@
 
     function initializeYouTubePlayer() {
         const youtubePlayerElement = document.getElementById('youtubePlayer');
+
         if (youtubePlayerElement && typeof YT !== 'undefined' && YT.Player) {
+            // ensure the iframe has the right origin and enablejsapi
+            fixIframeOrigin(); // added
+
             if (player && typeof player.destroy === 'function') {
-                player.destroy();
+                try { player.destroy(); } catch (e) {}
                 player = null;
                 playerIsReady = false;
-                pendingChapterTime = null;
+                // keep pendingChapterTime as is
                 console.log('Existing YouTube player destroyed before re-initialization.');
             }
 
@@ -117,22 +144,25 @@
     
     // THIS IS THE UPDATED FUNCTION
     function seekToChapter(seconds) {
-      console.log(`--- seekToChapter called for ${seconds} seconds ---`);
-      console.log(`playerIsReady: ${playerIsReady}`);
-      console.log(`player object exists: ${!!player}`); // Check if player is truthy
-      console.log(`typeof player.seekTo: ${typeof player.seekTo}`); // Check type of seekTo
+      console.log('--- seekToChapter called for ' + seconds + ' seconds ---');
+      console.log('playerIsReady: ' + playerIsReady);
+      console.log('player object exists: ' + !!player); // Check if player is truthy
+      console.log('typeof player.seekTo: ' + (player && player.seekTo ? typeof player.seekTo : 'undefined')); // Check type of seekTo
 
       if (playerIsReady && player && typeof player.seekTo === 'function') {
-        console.log(`Executing seek to ${seconds} seconds.`);
+        console.log('Executing seek to ' + seconds + ' seconds.');
         player.seekTo(seconds, true);
         player.playVideo();
       } else {
-        console.warn(`Youtubeer not yet ready for commands. Queuing seek to ${seconds}.`);
+        console.warn('Youtube player not yet ready for commands. Queuing seek to ' + seconds + '.');
         pendingChapterTime = seconds;
+        initializeYouTubePlayer(); // try to init if not ready
       }
     }
     // --- End YouTube Player Functions ---
 
+    // added
+    window.seekToChapter = seekToChapter;
 
     window.$docsify = {
       name:        'Cleanup Master',
@@ -145,7 +175,14 @@
       sidebarDisplayLevel: 1,
       subMaxLevel: 1,
       logo:        'assets/cleanupMaster.svg',
-     
+      // added: reinit after each page render
+      plugins: [
+        function (hook) {
+          hook.doneEach(function () {
+            setTimeout(initializeYouTubePlayer, 0);
+          });
+        }
+      ]
     };
   </script>
 
