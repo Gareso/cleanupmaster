@@ -29,7 +29,7 @@
   src="assets/UI_othertools.svg"
   alt="Linking Tools"
   width="100%"
-  style="max-width:600px; height:auto; align: center;"
+  style="max-width:800px; height:auto; align: center;"
 />
 
 1. **Renamer / Selector**
@@ -39,6 +39,7 @@
 5. **Add Keyframes**
 6. **Delete Points (Keeping Animation)**
 7. **Create Masks from Paths**
-8. **Create Shade Group**
-9. **Zero Transforms**
-10. **Remove Expressions**
+8. **Create Clipping Mask**
+9. **Create Shade Group**
+10. **Zero Transforms**
+11. **Remove Expressions**
