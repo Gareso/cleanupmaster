@@ -11,7 +11,7 @@
 />
 <br>
 <br>
-This button has double function:
+This button has triple function:
 <br><br>
 
 | Modifier       | Function | Action                       |
@@ -40,7 +40,7 @@ This button has double function:
 />
 <br>
 <br>
-This button has triple function:
+This button has quadruple function:
 <br><br>
 
 | Modifier | Function | Action |
@@ -48,6 +48,7 @@ This button has triple function:
 |      -    |     Stacking   |  Clone Layer or Shape Groups and invert opacity. <br> Click again to invert opacity only.       |
 |      OPT/ALT    |    Remove Pair       |     Remove inverted opacity pair (created for stacking) and resets the opacity of the selection   |
 |     CMD/CTRL     |   Hide Selection  |    Hides the selection by setting 0% opacity keyframes.<br><div class="alert-note"> ⚠️ When an inverted opacity pair is present, opacity keyframes will be added to the pair as well. Make sure keyframes are aligned with the original object keyframes. </div>    |
+|    SHIFT    |   Apply to parent group  |   Holding shift will invert the opacity of the parent group, not the selected shape(s) </div>    |
 
 
 
@@ -160,8 +161,8 @@ This button has double function:
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
-|     -     |  Create Masks     |   Creates another shape layer with masks attached to the current selction.    |
-|     OPT/ALT     |    Create Subtract Masks      |  <img src="assets/gifs/submask-creation.png" width="100%" style="max-width:250px; height:auto; align: center;"/><br><br>Opens up a dialog for you to choose the target layer for the mask. Works for any type of layer.<br><br>After creation, the masks will remain linked to the original paths, even if you move the layer around.|
+|     -     |  Create new layer with linked Masks     |   Creates another shape layer with masks attached to the current selection.<br>   |
+|     OPT/ALT     |    Apply Masks to a layer     |  <img src="assets/gifs/create-mask-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/><br><br>Opens up a dialog for you to choose the target layer for the masks. Works for any type of layer.<br><br>After creation, the masks will remain linked to the original paths, even if you move the layer around.<br>If the "Subtract" checkbox is checked, "Subtract" masks will be created. Otherwise, "Add" masks will be created.|
 
 
 
@@ -179,11 +180,49 @@ This button has double function:
 💡 TIP: Great for faces and details that need to be inside a shape. Combine with <a href="/#/features-linking#nulls">Nulls Follow Paths</a> and <a href="/#/features-linking#parent">Parent Shape Group to Null</a>.<br>
 </span>
 
+---
+<h4  id="clippingmask" style="display: flex; align-items: center; gap: 10px;">
+  <img src="assets/bt-clippingmask.svg" width="50" style="max-width: 50px;" />
+  <span>8. Create Clipping Masks</span>
+</h4>
+<img
+  src="assets/gifs/clippingmasks_01.gif"
+  alt="Visibility Tools"
+  width="100%"
+  style="max-width:650px; height:auto; align: center;"
+/>
+<br>
+<br>
+This button has triple function:
+<br>
+<br>
+
+| Modifier | Function | Action |
+| -------- | :------: | ------ |
+|     -     |  Create Clipping Mask     |  Select a shape and press this button, then choose another shape to act as the mask. Cleanup Master will automatically create the full Merge Paths hierarchy, clipping the first shape with the second.     |
+|     OPT/ALT     |    Remove Masks from selected     |  Removes the masks from the selected shapes and return them to the original condition.|
+|     CMD/CTRL     |    Convert Strokes to Fills     |  <img src="assets/gifs/clippingmasks_stroketofills_01.gif" width="100%" style="max-width:400px; height:auto; align: center;"/>  <img src="assets/gifs/clippingmasks_stroketofills_01_taper.gif" width="100%" style="max-width:400px; height:auto; align: center;"/><br><br>When clipping strokes, After Effects closes the resulting shape by default. This function avoids that by generating a filled shape that perfectly matches the original stroke, allowing strokes to be clipped just like any other shape. <strong>It supports all cap/join modes and TAPER!</strong><br><br><strong>The script will add 3 effects to your shape layer. </strong><br><br>You can:<br><br>• Control the resolution of the shape by adjusting the samples. <br>• Control the resolution of the line caps by changing the Cap Steps.<br>• Temporatily disable the shape to reduce point clutter by checking the checkbox.<br><br><img src="assets/gifs/strokes_to_fills_sliders.png" width="100%" style="max-width:400px; height:auto; align: center;"/> |
+
+
+
+<span style="
+  background-color: #d5d5d5;
+  border: 1px solid #a9a9a9;
+  border-radius: 15px;
+  color: #1e1e1e;
+  font-family: 'Roboto Mono', Monaco, courier, monospace;
+  font-size: 0.8rem;
+  padding: 0 25px 0 25px;
+  white-space: pre-wrap;
+  display: block;
+">
+💡 TIP: You can clip multiple shapes at once and/or clip shapes in sequence. Play with combinations and see what works! <br>
+</span>
 
 ---
 <h4  id="shade" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-shade.svg" width="50" style="max-width: 50px;" />
-  <span>8. Create Shade Group</span>
+  <span>9. Create Shade Group</span>
 </h4>
 <img
   src="assets/gifs/shade.gif"
@@ -208,7 +247,7 @@ This tool will create a clone of the current shape layer with only the selected 
 ---
 <h4  id="zero" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-zero.svg" width="50" style="max-width: 50px;" />
-  <span>9. Zero Transforms</span>
+  <span>10. Zero Transforms</span>
 </h4>
 <img
   src="assets/gifs/zero_transform.jpg"
@@ -224,7 +263,7 @@ Althought this function is already applied automatically when using anything in 
 ---
 <h4  id="expressions" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-expressions.svg" width="50" style="max-width: 50px;" />
-  <span>10. Remove Expressions</span>
+  <span>11. Remove Expressions</span>
 </h4>
 Remove expressions does what the name implies: Remove expressions. 
 - Works for the whole layer

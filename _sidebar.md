@@ -21,6 +21,7 @@
     * [- Add Keyframes](features-other.md#key)
     * [- Delete Points - Keep Animation](features-other.md#delete)
     * [- Create Masks from Paths](features-other.md#masks)
+    * [- Create Clipping Mask](features-other.md#clippingmask)
     * [- Create Shade Group](features-other.md#shade)
     * [- Zero Transforms](features-other.md#zero)
     * [- Remove Expressions](features-other.md#expressions)
