@@ -3,7 +3,7 @@
   * [Installation](installation.md#installation)
   * [Trial](trial.md#trial)
   * [Interface](interface.md)
-* [Tutorials](tutorials-tool.md#tutorials)
+* [Tutorials](tutorials.md#tutorials)
   * [Tool Overview](tutorials-tool.md#tutorials)
   * [Workflow Overview](tutorials-workflow.md#tutorials)
 * [Features](features.md#features)

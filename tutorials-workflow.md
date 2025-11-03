@@ -15,27 +15,27 @@
 <div class="media_table" style="margin-top: 25px; padding: 0 25px 0 25px;">
   <div class="media_table_cell" style="background-color: white; border-radius: 8px; padding: 20px; border: 1px solid #cccccc; margin: 0px;">
     <ul>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(4);">01. <span style="color: #1e1e1e;">Initial thoughts</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(56);">02. <span style="color: #1e1e1e;">1. The Design</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(96);">03. <span style="color: #1e1e1e;">2. The Rough Pass</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(150);">04. <span style="color: #1e1e1e;">3. Tracing Your Design</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(280);">05. <span style="color: #1e1e1e;">4. Renaming Shape Groups</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(346);">06. <span style="color: #1e1e1e;">5. Fill Shapes & Reorder</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(412);">07. <span style="color: #1e1e1e;">6. The Cleanup</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(775);">08. <span style="color: #1e1e1e;">7.1 Adding Details: Parenting to Nulls</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(4);">0 -<span style="color: #1e1e1e;"> Initial thoughts</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(56);">1 -<span style="color: #1e1e1e;"> The Design</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(96);">2 -<span style="color: #1e1e1e;"> The Rough Pass</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(150);">3 -<span style="color: #1e1e1e;"> Tracing Your Design</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(280);">4 -<span style="color: #1e1e1e;"> Renaming Shape Groups</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(346);">5 -<span style="color: #1e1e1e;"> Fill Shapes & Reorder</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(412);">6 -<span style="color: #1e1e1e;"> The Cleanup</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(775);">7.1 -<span style="color: #1e1e1e;"> Adding Details: Parenting to Nulls</span></a></li>
     </ul>
   </div>
 
   <div class="media_table_cell" style="background-color: white; border-radius: 8px; padding: 20px; border: 1px solid #cccccc; margin: 0px;">
     <ul>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(962);">09. <span style="color: #1e1e1e;">7.2 Adding Details: Animated Details</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(1085);">10. <span style="color: #1e1e1e;">7.3 Adding Details: Quick tip: Separating Strokes</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(1123);">11. <span style="color: #1e1e1e;">7.4 Adding Details: Quick tip: Contract Masks</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(1152);">12. <span style="color: #1e1e1e;">7.5 Adding Details: Clipping Strokes</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(1215);">13. <span style="color: #1e1e1e;">7.6 Adding Details: Working with Groups</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(1344);">14. <span style="color: #1e1e1e;">7.7 Adding Details: Combining Masks</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(1445);">15. <span style="color: #1e1e1e;">7.8 Adding Details: Adding Simple Shadows</span></a></li>
-      <li><a href="javascript:void(0)" onclick="seekToChapter(1508);">16. <span style="color: #1e1e1e;">Wrapping up</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(962);">7.2 -<span style="color: #1e1e1e;"> Adding Details: Animated Details</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(1085);">7.3 -<span style="color: #1e1e1e;"> Adding Details: Quick tip: Separating Strokes</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(1123);">7.4 -<span style="color: #1e1e1e;"> Adding Details: Quick tip: Contract Masks</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(1152);">7.5 -<span style="color: #1e1e1e;"> Adding Details: Clipping Strokes</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(1215);">7.6 -<span style="color: #1e1e1e;"> Adding Details: Working with Groups</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(1344);">7.7 -<span style="color: #1e1e1e;"> Adding Details: Combining Masks</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(1445);">7.8 -<span style="color: #1e1e1e;"> Adding Details: Adding Simple Shadows</span></a></li>
+      <li><a href="javascript:void(0)" onclick="seekToChapter(1508);">8 -<span style="color: #1e1e1e;"> Wrapping up</span></a></li>
     </ul>
   </div>
 </div>
