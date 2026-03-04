@@ -16,7 +16,7 @@
 
 <br>
 
-Click the **Gareso logo** at the bottom of the panel to open the Settings dialog.
+Click the **gear icon** at the bottom of the panel to open the Settings dialog.
 
 From there you can choose which features are visible in the panel. Unchecking a feature hides its button entirely, freeing up space and keeping the toolbar focused on what you actually use.
 
