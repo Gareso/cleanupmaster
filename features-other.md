@@ -89,7 +89,7 @@ This button has quadruple function:
 </h4>
 
 > **[IMAGE/VIDEO PLACEHOLDER]**
-> *Suggested: A side-by-side screen recording showing a character with a complex animated path. On the left, the animator makes a manual correction on a single frame - adjusting a few points on the path. On the right, Tweak Path automatically propagates that same correction to every keyframe in the work area, with the path adapting naturally to each keyframe's shape. Ideally shown as a before/after loop.*
+> *A side-by-side screen recording showing a character with a complex animated path. On the left, the animator makes a manual correction on a single frame - adjusting a few points on the path. On the right, Tweak Path automatically propagates that same correction to every keyframe in the work area, with the path adapting naturally to each keyframe's shape. Ideally shown as a before/after loop.*
 
 <br>
 
