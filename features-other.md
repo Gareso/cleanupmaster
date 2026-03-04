@@ -84,7 +84,7 @@ This button has quadruple function:
 
 ---
 <h4  id="tweak" style="display: flex; align-items: center; gap: 10px;">
-  <img src="assets/bt-tweak.svg" width="50" style="max-width: 50px;" />
+  <img src="assets/bt-tweakPath.svg" width="50" style="max-width: 50px;" />
   <span>4. Tweak Path</span>
 </h4>
 
