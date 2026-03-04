@@ -19,6 +19,7 @@
     * [- Renamer / Selector](features-other.md#renamer)     
     * [- Clone & Invert Opacity](features-other.md#invert)       
     * [- Copy / Paste Shape States](features-other.md#copy)
+    * [- Tweak Path](features-other.md#tweak)
     * [- Collapse Points](features-other.md#collapse)
     * [- Add Keyframes](features-other.md#key)
     * [- Delete Points - Keep Animation](features-other.md#delete)

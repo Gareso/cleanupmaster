@@ -63,21 +63,63 @@ This button has quadruple function:
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
-|     -     |  Copy       |   Copy selected path state. Works with multiple selections.     |
-|     OPT/ALT     |    Paste      |  Paste copied state.       |
+|     -     |  Copy state       |   Copy the current state of all selected paths. Works with multiple selections.     |
+|     SHIFT     |  Copy selected points only       |   Copy only the currently selected points from each path (partial copy). Useful when you want to lock down specific control points without affecting the rest of the path.     |
+|     OPT/ALT     |    Paste to current frame      |  Paste the copied state to the current time.       |
+|     SHIFT + OPT/ALT     |    Paste to all keyframes in work area      |  Pastes the copied points to every keyframe within the work area for each affected path. After copying selected points with SHIFT, set the work area to the target range and use this to apply the fix across all keyframes at once.       |
 
-**How to use:**
-1. Select one or more points in the comp viewer (accepts more than one path) and presse the button.
-2. Move the timeline to the desired point in time
+**How to use (Copy / Paste full state):**
+1. Select one or more points in the comp viewer (accepts more than one path) and press the button.
+2. Move the timeline to the desired point in time.
 3. Hold OPT/ALT and press the button to paste the copied shape state to the current time.
+
+**How to use (Copy / Paste selected points across keyframes):**
+1. Select the specific points you want to lock down in the comp viewer.
+2. Hold SHIFT and press the button to copy those points.
+3. Set the work area to the range of keyframes you want to update.
+4. Hold SHIFT + OPT/ALT and press the button to paste those points to every keyframe within the work area.
 
 > Pasting only works if you keep the same paths selected.
 
 
 ---
+<h4  id="tweak" style="display: flex; align-items: center; gap: 10px;">
+  <img src="assets/bt-tweak.svg" width="50" style="max-width: 50px;" />
+  <span>4. Tweak Path</span>
+</h4>
+
+> **[IMAGE/VIDEO PLACEHOLDER]**
+> *Suggested: A side-by-side screen recording showing a character with a complex animated path. On the left, the animator makes a manual correction on a single frame — adjusting a few points on the path. On the right, Tweak Path automatically propagates that same correction to every keyframe in the work area, with the path adapting naturally to each keyframe's shape. Ideally shown as a before/after loop.*
+
+<br>
+
+Tweak Path lets you make a shape correction on a single frame and automatically apply that same delta to all keyframes within the work area — accounting for how the path is deforming at each frame. It's like "find and replace" for shape edits.
+
+**This is a two-step process:**
+
+**Step 1 — Register a baseline:**
+1. Select the points you want to adjust in the comp viewer.
+2. Click the button to register the current state of those points as the baseline. The button icon will change to signal that a baseline is active.
+
+**Step 2 — Apply the tweak:**
+1. Adjust the path at the baseline frame — move the points to where they should be.
+2. Set the work area to the range of keyframes you want to update.
+3. Click the button again to apply the delta to all keyframes in the work area.
+
+| Modifier | Function | Action |
+| -------- | :------: | ------ |
+|     -     |  Register baseline / Apply delta       |   First click registers the baseline. After adjusting the path, click again to apply the correction to all keyframes in the work area.   |
+|     SHIFT (on Apply)     |    Keep baseline after applying      |  By default, the baseline is cleared after applying. Holding SHIFT keeps it active so you can continue tweaking and re-applying.   |
+|     OPT/ALT     |    Clear baseline      |  Clears the stored baseline and resets the button to its default state without applying anything.   |
+
+```
+💡 TIP: Set a tight work area around only the keyframes that need the correction. Keyframes outside the work area are left untouched.
+```
+
+---
 <h4  id="collapse" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-collapse.svg" width="50" style="max-width: 50px;" />
-  <span>4. Collapse Points</span>
+  <span>5. Collapse Points</span>
 </h4>
 Align points precisely on top of each other with this function. 
 <br>
@@ -95,7 +137,7 @@ Align points precisely on top of each other with this function.
 ---
 <h4  id="key" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-key.svg" width="50" style="max-width: 50px;" />
-  <span>5. Add Keyframes</span>
+  <span>6. Add Keyframes</span>
 </h4>
 Add keyframes to path properties.
 <br>
@@ -110,7 +152,7 @@ Add keyframes to path properties.
 ---
 <h4  id="delete" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-delete.svg" width="50" style="max-width: 50px;" />
-  <span>6. Delete Points (keeping animation)</span>
+  <span>7. Delete Points (keeping animation)</span>
 </h4>
 <img
   src="assets/gifs/delete.gif"
@@ -145,7 +187,7 @@ If you are familiar with shape layers in After Effects you probably know that de
 ---
 <h4  id="masks" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-masks.svg" width="50" style="max-width: 50px;" />
-  <span>7. Create Masks from Paths</span>
+  <span>8. Create Masks from Paths</span>
 </h4>
 <img
   src="assets/gifs/masks.gif"
@@ -183,7 +225,7 @@ This button has double function:
 ---
 <h4  id="clippingmask" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-clippingmask.svg" width="50" style="max-width: 50px;" />
-  <span>8. Create Clipping Masks</span>
+  <span>9. Create Clipping Masks</span>
 </h4>
 <img
   src="assets/gifs/clippingmasks_01.gif"
@@ -222,7 +264,7 @@ This button has triple function:
 ---
 <h4  id="shade" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-shade.svg" width="50" style="max-width: 50px;" />
-  <span>9. Create Shade Group</span>
+  <span>10. Create Shade Group</span>
 </h4>
 <img
   src="assets/gifs/shade.gif"
@@ -247,7 +289,7 @@ This tool will create a clone of the current shape layer with only the selected 
 ---
 <h4  id="zero" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-zero.svg" width="50" style="max-width: 50px;" />
-  <span>10. Zero Transforms</span>
+  <span>11. Zero Transforms</span>
 </h4>
 <img
   src="assets/gifs/zero_transform.jpg"
@@ -263,7 +305,7 @@ Althought this function is already applied automatically when using anything in 
 ---
 <h4  id="expressions" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-expressions.svg" width="50" style="max-width: 50px;" />
-  <span>11. Remove Expressions</span>
+  <span>12. Remove Expressions</span>
 </h4>
 Remove expressions does what the name implies: Remove expressions. 
 - Works for the whole layer
