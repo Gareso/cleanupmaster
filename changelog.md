@@ -3,6 +3,28 @@
 
 ---
 
+### v1.2.0 - Mar 2026
+
+<h3 style="color:#e94934">ADDED</h3>
+
+<strong>:: TWEAK PATH ::</strong>
+
+- New tool. Make a shape correction on a single frame and apply that same delta to all keyframes within the work area.
+- Hold SHIFT on apply to keep the baseline active for further tweaks.
+- Hold OPT/ALT to clear the baseline without applying.
+
+<strong>:: COPY / PASTE SHAPE STATES ::</strong>
+
+- Hold SHIFT to copy selected points only (partial copy).
+- Hold SHIFT + OPT/ALT to paste those points to every keyframe within the work area.
+
+<strong>:: SETTINGS PANEL ::</strong>
+
+- Click the gear icon at the bottom of the panel to open the Settings dialog.
+- Choose which features are visible in the panel. Rows are hidden automatically when all their buttons are turned off.
+
+---
+
 ### v1.1.3 - Sep 2025
 
 <h3 style="color:#e94934">FIXED</h3>
