@@ -89,20 +89,20 @@ This button has quadruple function:
 </h4>
 
 > **[IMAGE/VIDEO PLACEHOLDER]**
-> *Suggested: A side-by-side screen recording showing a character with a complex animated path. On the left, the animator makes a manual correction on a single frame — adjusting a few points on the path. On the right, Tweak Path automatically propagates that same correction to every keyframe in the work area, with the path adapting naturally to each keyframe's shape. Ideally shown as a before/after loop.*
+> *Suggested: A side-by-side screen recording showing a character with a complex animated path. On the left, the animator makes a manual correction on a single frame - adjusting a few points on the path. On the right, Tweak Path automatically propagates that same correction to every keyframe in the work area, with the path adapting naturally to each keyframe's shape. Ideally shown as a before/after loop.*
 
 <br>
 
-Tweak Path lets you make a shape correction on a single frame and automatically apply that same delta to all keyframes within the work area — accounting for how the path is deforming at each frame. It's like "find and replace" for shape edits.
+Tweak Path lets you make a shape correction on a single frame and automatically apply that same delta to all keyframes within the work area, accounting for how the path is deforming at each frame. It's like "find and replace" for shape edits.
 
 **This is a two-step process:**
 
-**Step 1 — Register a baseline:**
+**Step 1 - Register a baseline:**
 1. Select the points you want to adjust in the comp viewer.
 2. Click the button to register the current state of those points as the baseline. The button icon will change to signal that a baseline is active.
 
-**Step 2 — Apply the tweak:**
-1. Adjust the path at the baseline frame — move the points to where they should be.
+**Step 2 - Apply the tweak:**
+1. Adjust the path at the baseline frame - move the points to where they should be.
 2. Set the work area to the range of keyframes you want to update.
 3. Click the button again to apply the delta to all keyframes in the work area.
 
