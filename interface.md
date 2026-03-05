@@ -11,8 +11,12 @@
 
 ## Settings
 
-> **[IMAGE PLACEHOLDER]**
-> *Screenshot of the Settings dialog showing the checkboxes organized by section (Main Panels, Other Tools Row 1, Other Tools Row 2), with a few boxes unchecked to show the panel adapting and hiding the corresponding buttons.*
+<img
+  src="assets/settings_panel.png"
+  alt="Settings Panel"
+  width="100%"
+  style="max-width:400px; height:auto; align: center;"
+/>
 
 <br>
 
