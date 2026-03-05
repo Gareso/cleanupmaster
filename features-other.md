@@ -93,7 +93,7 @@ This button has quadruple function:
 
 <br>
 
-Tweak Path lets you make a shape correction on a single frame and automatically apply that same delta to all keyframes within the work area, accounting for how the path is deforming at each frame. It's like "find and replace" for shape edits.
+Tweak Path lets you make a shape correction on a single frame and automatically apply those changes to all keyframes within the work area, accounting for how the path is deforming at each frame. It's like "find and replace" for shape edits.
 
 **This is a two-step process:**
 
