@@ -116,6 +116,8 @@ Tweak Path lets you make a shape correction on a single frame and automatically 
 💡 TIP: Set a tight work area around only the keyframes that need the correction. Keyframes outside the work area are left untouched.
 ```
 
+<div class="alert-note"> ⚠️ When tweaking multiple shapes at once, keep simple transforms (moving, scaling, or rotating points as a group) separate from shape tweaks (adjusting individual point positions). Mixing both types of edits in the same tweak may produce unexpected results. </div>
+
 ---
 <h4  id="collapse" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-collapse.svg" width="50" style="max-width: 50px;" />
