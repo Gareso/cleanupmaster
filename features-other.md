@@ -123,17 +123,18 @@ Tweak Path lets you make a shape correction on a single frame and automatically 
   <img src="assets/bt-collapse.svg" width="50" style="max-width: 50px;" />
   <span>5. Collapse Points</span>
 </h4>
-Align points precisely on top of each other with this function. 
+Align points precisely on top of each other, or straighten them into a line.
 <br>
 <br>
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
 |     -     |  Collapse Points       |   Averages the position of all selected points, collapsing them to the same position.     |
-|     OPT/ALT     |    Include bezier handles      |  Zero bezier handles while collapsing.      |
+|     SHIFT     |  Collapse to Line      |  Aligns all selected points to a straight line. The direction is detected automatically: if the points are spread horizontally they align to the average Y (horizontal line); if spread vertically they align to the average X (vertical line).     |
+|     OPT/ALT     |  Zero bezier handles      |  Zero bezier handles while collapsing.      |
 
 ```
-💡 TIP: Move points as close to the intended position as possible before using the tool for more predictable and precisa results.
+💡 TIP: Move points as close to the intended position as possible before using the tool for more predictable and precise results.
 ```
 
 ---

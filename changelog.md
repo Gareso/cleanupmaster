@@ -18,6 +18,10 @@
 - Hold SHIFT to copy selected points only (partial copy).
 - Hold SHIFT + OPT/ALT to paste those points to every keyframe within the work area.
 
+<strong>:: COLLAPSE POINTS ::</strong>
+
+- Hold SHIFT to collapse selected points to a line. Direction is detected automatically based on the spread of the selection.
+
 <strong>:: SETTINGS PANEL ::</strong>
 
 - Click the gear icon at the bottom of the panel to open the Settings dialog.
