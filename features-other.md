@@ -2,7 +2,7 @@
 ---
 <h4  id="isolate" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-isolateselection.svg" width="50" style="max-width: 50px;" />
-  <span>1. Isolate Selection</span>
+  <span>Isolate Selection</span>
 </h4>
 
 > **[IMAGE/VIDEO PLACEHOLDER]**
@@ -29,7 +29,7 @@ The button icon changes when isolation is active. Click it again to release all 
 ---
 <h4  id="renamer" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-renamer.svg" width="50" style="max-width: 50px;" />
-  <span>2. Renamer / Selector</span>
+  <span>Renamer / Selector</span>
 </h4>
 <img
   src="assets/gifs/renaming.gif"
@@ -57,7 +57,7 @@ This button has triple function:
 ---
 <h4  id="invert" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-invert.svg" width="50" style="max-width: 50px;" />
-  <span>3. Clone & Invert Opacity</span>
+  <span>Clone & Invert Opacity</span>
 </h4>
 <img
   src="assets/gifs/stacking.gif"
@@ -85,7 +85,7 @@ This button has quadruple function:
 
 <h4  id="copy" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-copy.svg" width="50" style="max-width: 50px;" />
-  <span>4. Copy / Paste Shape States</span>
+  <span>Copy / Paste Shape States</span>
 </h4>
 
 | Modifier | Function | Action |
@@ -112,7 +112,7 @@ This button has quadruple function:
 ---
 <h4  id="tweak" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-tweakPath.svg" width="50" style="max-width: 50px;" />
-  <span>5. Tweak Path</span>
+  <span>Tweak Path</span>
 </h4>
 
 > **[IMAGE/VIDEO PLACEHOLDER]**
@@ -148,7 +148,7 @@ Tweak Path lets you make a shape correction on a single frame and automatically 
 ---
 <h4  id="collapse" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-collapse.svg" width="50" style="max-width: 50px;" />
-  <span>6. Collapse Points</span>
+  <span>Collapse Points</span>
 </h4>
 Align points precisely on top of each other, or straighten them into a line.
 <br>
@@ -167,7 +167,7 @@ Align points precisely on top of each other, or straighten them into a line.
 ---
 <h4  id="key" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-key.svg" width="50" style="max-width: 50px;" />
-  <span>7. Add Keyframes</span>
+  <span>Add Keyframes</span>
 </h4>
 Add keyframes to path properties.
 <br>
@@ -182,7 +182,7 @@ Add keyframes to path properties.
 ---
 <h4  id="delete" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-delete.svg" width="50" style="max-width: 50px;" />
-  <span>8. Delete Points (keeping animation)</span>
+  <span>Delete Points (keeping animation)</span>
 </h4>
 <img
   src="assets/gifs/delete.gif"
@@ -217,7 +217,7 @@ If you are familiar with shape layers in After Effects you probably know that de
 ---
 <h4  id="masks" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-masks.svg" width="50" style="max-width: 50px;" />
-  <span>9. Create Masks from Paths</span>
+  <span>Create Masks from Paths</span>
 </h4>
 <img
   src="assets/gifs/masks.gif"
@@ -255,7 +255,7 @@ This button has double function:
 ---
 <h4  id="clippingmask" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-clippingmask.svg" width="50" style="max-width: 50px;" />
-  <span>10. Create Clipping Masks</span>
+  <span>Create Clipping Masks</span>
 </h4>
 <img
   src="assets/gifs/clippingmasks_01.gif"
@@ -294,7 +294,7 @@ This button has triple function:
 ---
 <h4  id="shade" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-shade.svg" width="50" style="max-width: 50px;" />
-  <span>11. Create Shade Group</span>
+  <span>Create Shade Group</span>
 </h4>
 <img
   src="assets/gifs/shade.gif"
@@ -319,7 +319,7 @@ This tool will create a clone of the current shape layer with only the selected 
 ---
 <h4  id="zero" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-zero.svg" width="50" style="max-width: 50px;" />
-  <span>12. Zero Transforms</span>
+  <span>Zero Transforms</span>
 </h4>
 <img
   src="assets/gifs/zero_transform.jpg"
@@ -335,7 +335,7 @@ Althought this function is already applied automatically when using anything in 
 ---
 <h4  id="expressions" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-expressions.svg" width="50" style="max-width: 50px;" />
-  <span>13. Remove Expressions</span>
+  <span>Remove Expressions</span>
 </h4>
 Remove expressions does what the name implies: Remove expressions. 
 - Works for the whole layer
