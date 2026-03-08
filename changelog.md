@@ -7,6 +7,13 @@
 
 <h3 style="color:#e94934">ADDED</h3>
 
+<strong>:: ISOLATE SELECTION ::</strong>
+
+- New tool. Select the paths you want to keep editable and click to lock everything else in the layer. Click again to release all locks.
+- SHIFT + selection: Add paths to the current isolated set.
+- OPT/ALT + selection: Remove paths from the isolated set.
+- SHIFT (nothing selected): Restore the previous isolated selection.
+
 <strong>:: TWEAK PATH ::</strong>
 
 - New tool. Make a shape correction on a single frame and apply that same delta to all keyframes within the work area.

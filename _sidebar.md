@@ -16,6 +16,7 @@
     * [- Create Null to Follow Points](features-linking.md#nulls)       
     * [- Trace Path](features-linking.md#trace)
   * [Other Tools](features-other.md#other-tools)
+    * [- Isolate Selection](features-other.md#isolate)
     * [- Renamer / Selector](features-other.md#renamer)     
     * [- Clone & Invert Opacity](features-other.md#invert)       
     * [- Copy / Paste Shape States](features-other.md#copy)

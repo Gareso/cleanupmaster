@@ -1,8 +1,35 @@
 # Other Tools
 ---
+<h4  id="isolate" style="display: flex; align-items: center; gap: 10px;">
+  <img src="assets/bt-isolate.svg" width="50" style="max-width: 50px;" />
+  <span>1. Isolate Selection</span>
+</h4>
+
+> **[IMAGE/VIDEO PLACEHOLDER]**
+> *A screen recording showing a complex shape layer with many paths. The animator selects a few points, clicks Isolate Selection, and then freely edits only those paths while the rest of the layer stays locked in place. Then clicking the active button releases everything back to normal.*
+
+<br>
+
+When working on a complex shape layer, it is easy to accidentally move points that should not be touched. Isolate Selection locks all paths in the layer except the ones you select, keeping everything else frozen in place while you edit.
+
+The button icon changes when isolation is active. Click it again to release all locks.
+
+| Modifier | Function | Action |
+| -------- | :------: | ------ |
+| - | Isolate | Select one or more points in the comp viewer, then click to lock all other paths in the layer. |
+| - (active) | Release all | When isolation is already active, clicking the button with nothing selected releases all locked paths. |
+| SHIFT + selection | Add to isolated set | Adds the selected paths to the current isolated set without releasing the existing ones. |
+| OPT/ALT + selection | Remove from isolated set | Removes the selected paths from the isolated set, locking them again. |
+| SHIFT (nothing selected) | Restore previous selection | Restores the last isolated set, useful if you accidentally released the isolation. |
+
+```
+💡 TIP: Combine with Solo Selected Shapes for a fully distraction-free editing experience.
+```
+
+---
 <h4  id="renamer" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-renamer.svg" width="50" style="max-width: 50px;" />
-  <span>1. Renamer / Selector</span>
+  <span>3. Renamer / Selector</span>
 </h4>
 <img
   src="assets/gifs/renaming.gif"
@@ -30,7 +57,7 @@ This button has triple function:
 ---
 <h4  id="invert" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-invert.svg" width="50" style="max-width: 50px;" />
-  <span>2. Clone & Invert Opacity</span>
+  <span>3. Clone & Invert Opacity</span>
 </h4>
 <img
   src="assets/gifs/stacking.gif"
@@ -58,7 +85,7 @@ This button has quadruple function:
 
 <h4  id="copy" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-copy.svg" width="50" style="max-width: 50px;" />
-  <span>3. Copy / Paste Shape States</span>
+  <span>4. Copy / Paste Shape States</span>
 </h4>
 
 | Modifier | Function | Action |
@@ -85,7 +112,7 @@ This button has quadruple function:
 ---
 <h4  id="tweak" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-tweakPath.svg" width="50" style="max-width: 50px;" />
-  <span>4. Tweak Path</span>
+  <span>5. Tweak Path</span>
 </h4>
 
 > **[IMAGE/VIDEO PLACEHOLDER]**
@@ -121,7 +148,7 @@ Tweak Path lets you make a shape correction on a single frame and automatically 
 ---
 <h4  id="collapse" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-collapse.svg" width="50" style="max-width: 50px;" />
-  <span>5. Collapse Points</span>
+  <span>6. Collapse Points</span>
 </h4>
 Align points precisely on top of each other, or straighten them into a line.
 <br>
@@ -140,7 +167,7 @@ Align points precisely on top of each other, or straighten them into a line.
 ---
 <h4  id="key" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-key.svg" width="50" style="max-width: 50px;" />
-  <span>6. Add Keyframes</span>
+  <span>7. Add Keyframes</span>
 </h4>
 Add keyframes to path properties.
 <br>
@@ -155,7 +182,7 @@ Add keyframes to path properties.
 ---
 <h4  id="delete" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-delete.svg" width="50" style="max-width: 50px;" />
-  <span>7. Delete Points (keeping animation)</span>
+  <span>8. Delete Points (keeping animation)</span>
 </h4>
 <img
   src="assets/gifs/delete.gif"
@@ -190,7 +217,7 @@ If you are familiar with shape layers in After Effects you probably know that de
 ---
 <h4  id="masks" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-masks.svg" width="50" style="max-width: 50px;" />
-  <span>8. Create Masks from Paths</span>
+  <span>9. Create Masks from Paths</span>
 </h4>
 <img
   src="assets/gifs/masks.gif"
@@ -228,7 +255,7 @@ This button has double function:
 ---
 <h4  id="clippingmask" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-clippingmask.svg" width="50" style="max-width: 50px;" />
-  <span>9. Create Clipping Masks</span>
+  <span>10. Create Clipping Masks</span>
 </h4>
 <img
   src="assets/gifs/clippingmasks_01.gif"
@@ -267,7 +294,7 @@ This button has triple function:
 ---
 <h4  id="shade" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-shade.svg" width="50" style="max-width: 50px;" />
-  <span>10. Create Shade Group</span>
+  <span>11. Create Shade Group</span>
 </h4>
 <img
   src="assets/gifs/shade.gif"
@@ -292,7 +319,7 @@ This tool will create a clone of the current shape layer with only the selected 
 ---
 <h4  id="zero" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-zero.svg" width="50" style="max-width: 50px;" />
-  <span>11. Zero Transforms</span>
+  <span>12. Zero Transforms</span>
 </h4>
 <img
   src="assets/gifs/zero_transform.jpg"
@@ -308,7 +335,7 @@ Althought this function is already applied automatically when using anything in 
 ---
 <h4  id="expressions" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-expressions.svg" width="50" style="max-width: 50px;" />
-  <span>12. Remove Expressions</span>
+  <span>13. Remove Expressions</span>
 </h4>
 Remove expressions does what the name implies: Remove expressions. 
 - Works for the whole layer

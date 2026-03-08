@@ -29,7 +29,7 @@ Features are grouped by section:
 | Section | Features |
 | ------- | -------- |
 | **Main Panels** | Visibility Tools, Linking Tools |
-| **Other Tools - Row 1** | Rename / Group, Inverted Opacity, Copy / Paste Path, Tweak Path, Align Points, Add Keyframes |
+| **Other Tools - Row 1** | Isolate Selection, Rename / Group, Inverted Opacity, Copy / Paste Path, Tweak Path, Align Points, Add Keyframes |
 | **Other Tools - Row 2** | Shape Version, Masks, Clipping Mask, Shade Group, Zero Transforms, Remove Expressions |
 
 Rows are hidden automatically when all their buttons are turned off. Click **Reset Defaults** to turn everything back on.
