@@ -16,14 +16,14 @@ The button icon changes when isolation is active. Click it again to release all 
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
-| - | Isolate | Select one or more points in the comp viewer, then click to lock all other paths in the layer. |
-| - (active) | Release all | When isolation is already active, clicking the button with nothing selected releases all locked paths. |
+| Click | Isolate | Select one or more points in the comp viewer, then click to lock all other paths in the layer. |
+| Click (active) | Release all | When isolation is already active, clicking the button releases all locked paths. |
 | SHIFT + selection | Add to isolated set | Adds the selected paths to the current isolated set without releasing the existing ones. |
 | OPT/ALT + selection | Remove from isolated set | Removes the selected paths from the isolated set, locking them again. |
 | SHIFT (nothing selected) | Restore previous selection | Restores the last isolated set, useful if you accidentally released the isolation. |
 
 ```
-💡 TIP: Combine with Solo Selected Shapes for a fully distraction-free editing experience.
+💡 IMPORTANT: To add or remove paths when Isolate Selection is active you'll need to use a rectangle selection, as the other points are not directly selectable (If the pen tool is active, holding opt/alt activates the selection tool).
 ```
 
 ---
