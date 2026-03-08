@@ -29,7 +29,7 @@ The button icon changes when isolation is active. Click it again to release all 
 ---
 <h4  id="renamer" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-renamer.svg" width="50" style="max-width: 50px;" />
-  <span>3. Renamer / Selector</span>
+  <span>2. Renamer / Selector</span>
 </h4>
 <img
   src="assets/gifs/renaming.gif"
