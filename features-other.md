@@ -20,7 +20,7 @@ The button icon changes when isolation is active. Click it again to release all 
 | Click (active) | Release all | When isolation is already active, clicking the button releases all locked paths. |
 | SHIFT + selection | Add to isolated set | Adds the selected paths to the current isolated set without releasing the existing ones. |
 | OPT/ALT + selection | Remove from isolated set | Removes the selected paths from the isolated set, locking them again. |
-| SHIFT (nothing selected) | Restore previous selection | Restores the last isolated set, useful if you accidentally released the isolation. |
+| SHIFT (nothing selected) | Restore previous selection | Restores the last isolated set. Very useful when focusing on a particular part of a character.|
 
 ```
 💡 IMPORTANT: To add or remove paths when Isolate Selection is active you'll need to use a rectangle selection, as the other points are not directly selectable (If the pen tool is active, holding opt/alt activates the selection tool).
