@@ -1,7 +1,7 @@
 # Other Tools
 ---
 <h4  id="isolate" style="display: flex; align-items: center; gap: 10px;">
-  <img src="assets/bt-isolate.svg" width="50" style="max-width: 50px;" />
+  <img src="assets/bt-isolateselection.svg" width="50" style="max-width: 50px;" />
   <span>1. Isolate Selection</span>
 </h4>
 
