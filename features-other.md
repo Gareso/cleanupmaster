@@ -5,8 +5,12 @@
   <span>Isolate Selection</span>
 </h4>
 
-> **[IMAGE/VIDEO PLACEHOLDER]**
-> *A screen recording showing a complex shape layer with many paths. The animator selects a few points, clicks Isolate Selection, and then freely edits only those paths while the rest of the layer stays locked in place. Then clicking the active button releases everything back to normal.*
+<img
+  src="assets/gifs/isolate_selection.gif"
+  alt="Isolate Selection"
+  width="100%"
+  style="max-width:650px; height:auto; align: center;"
+/>
 
 <br>
 
