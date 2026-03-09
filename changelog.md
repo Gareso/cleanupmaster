@@ -20,12 +20,12 @@
 - Hold SHIFT on apply to keep the baseline active for further tweaks.
 - Hold OPT/ALT to clear the baseline without applying.
 
-<strong>:: COPY / PASTE SHAPE STATES ::</strong>
+<strong>:: COPY / PASTE SHAPE STATES - COPY / PASTE SELECTED POINTS TO WORK AREA ::</strong>
 
 - Hold SHIFT to copy selected points only (partial copy).
 - Hold SHIFT + OPT/ALT to paste those points to every keyframe within the work area.
 
-<strong>:: COLLAPSE POINTS ::</strong>
+<strong>:: COLLAPSE POINTS - COLLAPSE TO LINE ::</strong>
 
 - Hold SHIFT to collapse selected points to a line. Direction is detected automatically based on the spread of the selection.
 
