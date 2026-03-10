@@ -119,8 +119,12 @@ This button has quadruple function:
   <span>Tweak Path</span>
 </h4>
 
-> **[IMAGE/VIDEO PLACEHOLDER]**
-> *A side-by-side screen recording showing a character with a complex animated path. On the left, the animator makes a manual correction on a single frame - adjusting a few points on the path. On the right, Tweak Path automatically propagates that same correction to every keyframe in the work area, with the path adapting naturally to each keyframe's shape. Ideally shown as a before/after loop.*
+<img
+  src="assets/gifs/TweakPath_forDoc.gif"
+  alt="Tweak Path"
+  width="100%"
+  style="max-width:650px; height:auto; align: center;"
+/>
 
 <br>
 
