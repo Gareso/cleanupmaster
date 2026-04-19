@@ -3,6 +3,31 @@
 
 ---
 
+### v1.2.2 - Apr 2026
+
+<h3 style="color:#e94934">CHANGED</h3>
+
+<strong>:: ISOLATE SELECTION ::</strong>
+
+- Releasing isolation now unlocks locked paths across **every layer in the comp**, not just the active one. Ensures no stale locks are left behind after switching layers.
+- Auto-release on layer switch has been removed. Click the button explicitly to release isolation.
+
+<strong>:: ADD KEYFRAMES ::</strong>
+
+- Default behavior flipped: now adds a keyframe to **selected paths only**. If no path is selected, adds to all paths in the layer.
+
+<h3 style="color:#e94934">FIXED</h3>
+
+<strong>:: ISOLATE SELECTION ::</strong>
+
+- Added guard for unactionable selections: if the layer has only one path, or all paths are selected, the button now shows a clear message instead of locking nothing silently.
+
+<strong>:: GENERAL ::</strong>
+
+- Fixed "Cannot run a script while a modal dialog is waiting for response" errors. Button states (Tweak Path, Isolate Selection) now sync on mouseover instead of background polling.
+
+---
+
 ### v1.2.0 - Mar 2026
 
 <h3 style="color:#e94934">ADDED</h3>

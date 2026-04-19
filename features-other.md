@@ -21,7 +21,7 @@ The button icon changes when isolation is active. Click it again to release all 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
 | Click | Isolate | Select one or more points in the comp viewer, then click to lock all other paths in the layer. |
-| Click (active) | Release all | When isolation is already active, clicking the button releases all locked paths. |
+| Click (active) | Release all | When isolation is already active, clicking the button releases all locked paths across every layer in the comp. |
 | SHIFT + selection | Add to isolated set | Adds the selected paths to the current isolated set without releasing the existing ones. |
 | OPT/ALT + selection | Remove from isolated set | Removes the selected paths from the isolated set, locking them again. |
 | SHIFT (nothing selected) | Restore previous selection | Restores the last isolated set. Very useful when focusing on a particular part of a character.|
@@ -183,8 +183,7 @@ Add keyframes to path properties.
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
-|     -     |  Add keyframes     |   Add Keyframes to all path properties in the layer.    |
-|     OPT/ALT     |    Selected only      |  Add keyframe to selected paths only.     |
+|     -     |  Add keyframes     |   Add a keyframe to selected paths. If no path is selected, adds a keyframe to all paths in the layer.    |
 
 
 ---
