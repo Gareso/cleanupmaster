@@ -28,6 +28,14 @@
 
 ---
 
+### v1.2.1 - Apr 2026
+
+<h3 style="color:#e94934">CHANGED</h3>
+
+- Updated licensing framework.
+
+---
+
 ### v1.2.0 - Mar 2026
 
 <h3 style="color:#e94934">ADDED</h3>
