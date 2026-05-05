@@ -323,7 +323,7 @@ This tool will create a clone of the current shape layer with only the selected 
 | Modifier | Behavior |
 | -------- | -------- |
 | - | Creates the shade group as usual. |
-| CMD/CTRL | Creates the shade group and hides the selected original shapes (eye off). The clone's opacity dynamically references the original's opacity — keyframes and static values are respected live. |
+| CMD/CTRL | Creates the shade group and hides the selected original shapes (eye off). The clone's opacity dynamically references the original's opacity; keyframes and static values are respected live. |
 | SHIFT | Toggles the hidden originals visible/hidden for editing. Use this when you need to access the original shapes. |
 | OPT/ALT on shade group layer | Deletes the shade group and restores all hidden originals on the source layer. |
 | OPT/ALT on source layer | Restores only the selected hidden groups on that layer. |
