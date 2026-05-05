@@ -20,11 +20,15 @@ The button icon changes when isolation is active. Click it again to release all 
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
-| Click | Isolate | Select one or more points in the comp viewer, then click to lock all other paths in the layer. |
+| Click | Isolate | Select one or more points in the comp viewer, then click to lock all other paths in the layer. Works on shape paths and mask paths. Selecting only mask paths also locks all shape paths, and vice versa. |
 | Click (active) | Release all | When isolation is already active, clicking the button releases all locked paths across every layer in the comp. |
 | SHIFT + selection | Add to isolated set | Adds the selected paths to the current isolated set without releasing the existing ones. |
 | OPT/ALT + selection | Remove from isolated set | Removes the selected paths from the isolated set, locking them again. |
 | SHIFT (nothing selected) | Restore previous selection | Restores the last isolated set. Very useful when focusing on a particular part of a character.|
+
+> Locked paths are also immune to **Free Transform** (the double-click transform operation in the comp viewer).
+
+> Mask path support respects the **Affect Masks** setting.
 
 ```
 💡 IMPORTANT: To add or remove paths when Isolate Selection is active you'll need to use a rectangle selection, as the other points are not directly selectable (If the pen tool is active, holding opt/alt activates the selection tool).
@@ -47,7 +51,7 @@ This button has triple function:
 
 | Modifier       | Function | Action                       |
 | ------------- | :--------: | --------------------------- |
-| -      |    Renamer    | <img src="assets/gifs/renamer-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/><br><br>Renames selected Shapes Groups and all other layers/expressions that references it.<br> If more than one shape or layer is selected, the function will append "01,02,03..." to the names.<br> <div class="alert-note"> ⚠️ The shape group names need to be unique for the renamer to work fully. If names are not unique, expressions and other layers won’t be updated. </div>    |
+| -      |    Renamer    | <img src="assets/gifs/renamer-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/><br><br>Renames selected Shape Groups or mask paths, and updates all other layers/expressions that reference them. When renaming a mask path, also updates `.mask("name")` references in expressions and any layer names that reference the mask.<br> If more than one shape or layer is selected, the function will append "01,02,03..." to the names.<br> <div class="alert-note"> ⚠️ The shape group and mask names need to be unique for the renamer to work fully. If names are not unique, expressions and other layers won’t be updated. </div>    |
 | OPT/ALT |   Selector     | Reads a point selection in the comp viewer and selects the Shape Groups and keyframed properties related to it.<br><br> Double-tap `SS` on your keyboard to reveal and isolate the selected properties in the timeline.|
 | CMD/CTRL |   Group Shapes     | Groups the selected shapes together. Type the name of the new group in the dialog.<br> <div class="alert-note"> ⚠️ Grouping shapes that have inverted opacity pairs, linked nulls or any other expression related function will break connections. </div>|
 
@@ -94,10 +98,12 @@ This button has quadruple function:
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
-|     -     |  Copy state       |   Copy the current state of all selected paths. Works with multiple selections.     |
+|     -     |  Copy state       |   Copy the current state of all selected paths. Works with multiple selections, including mask paths.     |
 |     SHIFT     |  Copy selected points only       |   Copy only the currently selected points from each path (partial copy). Useful when you want to lock down specific control points without affecting the rest of the path.     |
 |     OPT/ALT     |    Paste to current frame      |  Paste the copied state to the current time.       |
 |     SHIFT + OPT/ALT     |    Paste to all keyframes in work area      |  Pastes the copied points to every keyframe within the work area for each affected path. After copying selected points with SHIFT, set the work area to the target range and use this to apply the fix across all keyframes at once.       |
+
+> Mask path support respects the **Affect Masks** setting.
 
 **How to use (Copy / Paste full state):**
 1. Select one or more points in the comp viewer (accepts more than one path) and press the button.
@@ -128,7 +134,7 @@ This button has quadruple function:
 
 <br>
 
-Tweak Path lets you make a shape correction on a single frame and automatically apply those changes to all keyframes within the work area, accounting for how the path is deforming at each frame. It's like "find and replace" for shape edits.
+Tweak Path lets you make a shape correction on a single frame and automatically apply those changes to all keyframes within the work area, accounting for how the path is deforming at each frame. It's like "find and replace" for shape edits. Works on both shape paths and mask paths (when **Affect Masks** is enabled).
 
 **This is a two-step process:**
 
@@ -158,7 +164,7 @@ Tweak Path lets you make a shape correction on a single frame and automatically 
   <img src="assets/bt-collapse.svg" width="50" style="max-width: 50px;" />
   <span>Collapse Points</span>
 </h4>
-Align points precisely on top of each other, or straighten them into a line.
+Align points precisely on top of each other, or straighten them into a line. Works on both shape paths and mask paths (when **Affect Masks** is enabled).
 <br>
 <br>
 
@@ -314,8 +320,16 @@ Think Pre-Comping for shape groups.<br>
 This tool will create a clone of the current shape layer with only the selected shape groups.
 <br>
 
+| Modifier | Behavior |
+| -------- | -------- |
+| - | Creates the shade group as usual. |
+| CMD/CTRL | Creates the shade group and hides the selected original shapes (eye off). The clone's opacity dynamically references the original's opacity — keyframes and static values are respected live. |
+| SHIFT | Toggles the hidden originals visible/hidden for editing. Use this when you need to access the original shapes. |
+| OPT/ALT on shade group layer | Deletes the shade group and restores all hidden originals on the source layer. |
+| OPT/ALT on source layer | Restores only the selected hidden groups on that layer. |
+
 **Use this for:**
-1. Combining shapes together for shading (adding inner shadow, inner glowm effect, and so on...)
+1. Combining shapes together for shading (adding inner shadow, inner glow effect, and so on...)
 2. Also great for comping: create layers to be used as track mattes.
 <br>
 

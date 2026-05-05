@@ -42,7 +42,7 @@ This button has double function:
 
 | Modifier       | Function | Action                       |
 | ------------- | :--------: | --------------------------- |
-| -      |    Create Nulls to follow selected points   |  Similar to the traditional Create Nulls to Follow Points script, with a few key differences:<br><br>- Create Nulls for selected points only <br>- Nulls are linked to shape groups names (not indices) so you can change the stacking order without breaking the connection.<br>- Each null comes with a Point Index slider, allowing you to reposition it if you edit the path by adding or removing points.<br><br><img src="assets/gifs/pointSlider.jpg" width="100%" style="max-width:400px; height:auto; align: center;"/>|
+| -      |    Create Nulls to follow selected points   |  Similar to the traditional Create Nulls to Follow Points script, with a few key differences:<br><br>- Create Nulls for selected points only <br>- Works on shape paths and mask paths (when **Affect Masks** is enabled)<br>- Nulls are linked to shape group or mask path names (not indices) so you can change the stacking order without breaking the connection.<br>- Each null comes with a Point Index slider, allowing you to reposition it if you edit the path by adding or removing points.<br><br><img src="assets/gifs/pointSlider.jpg" width="100%" style="max-width:400px; height:auto; align: center;"/>|
 | OPT/ALT |  Ignore rotation  | Removes the parent from the selected shape groups, keeping current position.|
 
 
@@ -57,7 +57,7 @@ This button has double function:
 
 | Modifier       | Function | Action                       |
 | ------------- | :--------: | --------------------------- |
-| -      |    Create Nulls to trace selected paths   |  Similar to the traditional Trace Path script: it creates a Null that moves around the edge of the path. Has a few key differences compared to the original:<br><br>- Nulls are linked to shape group names, so you can change stacking order without breaking connection <br>- Progress is controlled with an Angle Control, not a slider. That means it's easier to control how many times an element moves around the shape.<br><br><img src="assets/gifs/angle_control.jpg" width="100%" style="max-width:400px; height:auto; align: center;"/>|
+| -      |    Create Nulls to trace selected paths   |  Similar to the traditional Trace Path script: it creates a Null that moves around the edge of the path. Has a few key differences compared to the original:<br><br>- Works on shape paths and mask paths (when **Affect Masks** is enabled)<br>- Nulls are linked to shape group or mask path names, so you can change stacking order without breaking connection <br>- Progress is controlled with an Angle Control, not a slider. That means it's easier to control how many times an element moves around the shape.<br><br><img src="assets/gifs/angle_control.jpg" width="100%" style="max-width:400px; height:auto; align: center;"/>|
 | OPT/ALT |  Ignore rotation  | Removes the parent from the selected shape groups, keeping current position.|
 
 **Use this to:**

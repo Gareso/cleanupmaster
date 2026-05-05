@@ -3,6 +3,57 @@
 
 ---
 
+### v1.2.3 - May 2026
+
+<h3 style="color:#e94934">ADDED</h3>
+
+<strong>:: MASK SUPPORT ::</strong>
+
+The following tools now work on mask paths, in addition to shape layer paths:
+
+- **Visibility Tools** (Solo, Hide Selected, Restore Visibility) — solo/hide now includes selected mask paths
+- **Copy / Paste Shape State** — copies and pastes mask path shapes
+- **Align Points (Collapse Points)** — works on selected mask points
+- **Tweak Path** — registers and applies delta to mask points
+- **Isolate Selection** — locks/unlocks unselected mask paths; selecting only mask paths will also lock all shape paths, and vice versa
+- **Create Nulls to Follow Points** — creates nulls linked to mask path vertices
+- **Trace Path** — creates a null that travels around a mask path
+- **Renamer** — renames mask paths and updates `.mask("name")` references in expressions; also updates layer names that reference the mask
+
+> Mask support respects the **Affect Masks** setting (see Settings below).
+
+<strong>:: SETTINGS — "AFFECT MASKS" TOGGLE ::</strong>
+
+A new **Tool-wide options** section appears at the top of the Settings dialog. It contains a single checkbox:
+
+☑ **Affect Masks** — when enabled, all buttons that support masks will also work on mask paths. Uncheck to revert all tools to shape-only behavior.
+
+<strong>:: SHADE GROUP — NEW MODIFIERS ::</strong>
+
+The Create Shade Group button now has three modifier behaviors:
+
+| Modifier | Behavior |
+| -------- | -------- |
+| CMD/CTRL | Creates the shade group and hides the selected original shapes (eye off). The clone's opacity dynamically references the original's opacity — keyframes and static values are respected live. |
+| SHIFT | Toggles the hidden originals visible/hidden for editing. Use this when you need to access the original shapes. |
+| OPT/ALT on shade group layer | Deletes the shade group and restores all hidden originals on the source layer. |
+| OPT/ALT on source layer | Restores only the selected hidden groups on that layer. |
+
+<h3 style="color:#e94934">CHANGED</h3>
+
+<strong>:: ISOLATE SELECTION ::</strong>
+
+- Paths locked by Isolate Selection are now also immune to **Free Transform** (the double-click transform operation in the comp viewer). Previously the lock could be bypassed this way.
+
+<h3 style="color:#e94934">FIXED</h3>
+
+<strong>:: ISOLATE SELECTION ::</strong>
+
+- Selecting only one mask path (with more shapes present): now correctly locks the shapes.
+- Selecting one mask path out of several alongside shape paths: now locks both the other mask paths and all shape paths.
+
+---
+
 ### v1.2.2 - Apr 2026
 
 <h3 style="color:#e94934">CHANGED</h3>

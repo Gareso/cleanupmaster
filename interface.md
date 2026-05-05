@@ -22,7 +22,17 @@
 
 Click the **gear icon** at the bottom of the panel to open the Settings dialog.
 
-From there you can choose which features are visible in the panel. Unchecking a feature hides its button entirely, freeing up space and keeping the toolbar focused on what you actually use.
+### Tool-wide Options
+
+At the top of the Settings dialog, a **Tool-wide options** section contains global behavior toggles:
+
+| Option | Description |
+| ------ | ----------- |
+| ☑ **Affect Masks** | When enabled, all buttons that support masks will also work on mask paths. Uncheck to revert all tools to shape-only behavior. |
+
+### Feature Visibility
+
+From the Settings dialog you can also choose which features are visible in the panel. Unchecking a feature hides its button entirely, freeing up space and keeping the toolbar focused on what you actually use.
 
 Features are grouped by section:
 

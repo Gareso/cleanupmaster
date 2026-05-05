@@ -17,7 +17,7 @@ This button has double function:
 
 | Modifier       | Function | Action                       |
 | ------------- | :--------: | --------------------------- |
-| -      |    Solo    | Temporarily isolates the selected paths by hiding all others in the same layer. Works with either a point selection in the comp-viewer or a direct selection in the timeline.   |
+| -      |    Solo    | Temporarily isolates the selected paths by hiding all others in the same layer. Works with either a point selection in the comp-viewer or a direct selection in the timeline. Also works on mask paths (when **Affect Masks** is enabled).   |
 | OPT/ALT |   Select all Points     | Selects all points in the selected paths for easier editing. |
 
 
@@ -39,7 +39,7 @@ This button has double function:
 
 The opposite of Solo. Hides all selected paths. This makes it easier to reveal and work on specific shapes without any distractions.
 
-Works with either a point selection in the comp-viewer or a direct selection in the timeline.
+Works with either a point selection in the comp-viewer or a direct selection in the timeline. Also works on mask paths (when **Affect Masks** is enabled).
 
 
 **Use this to:**
@@ -52,5 +52,5 @@ Works with either a point selection in the comp-viewer or a direct selection in 
   <span>3. Restore Shape Visibility</span>
 </h4>
 
-Makes ALL shape groups in a layer visible. 
+Makes ALL shape groups and mask paths in a layer visible.
 > The tool does not store previous selection states.
