@@ -3,6 +3,41 @@
 
 ---
 
+### v1.2.5 - May 2026
+
+<h3 style="color:#e94934">ADDED</h3>
+
+<strong>:: SOLO SELECTED SHAPES ::</strong>
+
+- New modifier: OPT/ALT + SHIFT selects all points in the parent shape group of the current selection. If the selection is at root level (no parent group), selects all points in the entire layer.
+
+<strong>:: CREATE CLIPPING MASKS ::</strong>
+
+- New mode dropdown: choose the Merge Paths blend mode before applying (Merge, Add, Subtract, Intersect, Exclude Intersections). Defaults to Intersect.
+- New Include strokes option: adds an Offset Paths modifier to the mask group, with the offset linked to the stroke widths of both shapes. Inside − (default) offsets inward; Outside + offsets outward. The offset respects stroke visibility dynamically.
+
+<strong>:: CREATE MASKS FROM PATHS ::</strong>
+
+- New Include strokes option (in the CMD/CTRL dialog): sets Mask Expansion on the created mask, linked to the source shape's stroke width. Inside − contracts to the inner stroke edge; Outside + expands to the outer stroke edge. Expression-driven and respects stroke visibility.
+
+<h3 style="color:#e94934">CHANGED</h3>
+
+<strong>:: COPY / PASTE SHAPE STATES ::</strong>
+
+- Paste modifier changed from OPT/ALT to CMD/CTRL (and SHIFT + OPT/ALT to SHIFT + CMD/CTRL). OPT/ALT is now consistently used for delete/remove across all buttons.
+
+<strong>:: CREATE MASKS FROM PATHS ::</strong>
+
+- Apply to layer dialog now opens with CMD/CTRL (was OPT/ALT).
+
+<h3 style="color:#e94934">FIXED</h3>
+
+<strong>:: ADD KEYFRAMES ::</strong>
+
+- Now correctly adds keyframes across all selected shape layers simultaneously (previously only affected the first selected layer).
+
+---
+
 ### v1.2.3 - May 2026
 
 <h3 style="color:#e94934">ADDED</h3>

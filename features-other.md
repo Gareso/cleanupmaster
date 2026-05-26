@@ -100,21 +100,21 @@ This button has quadruple function:
 | -------- | :------: | ------ |
 |     -     |  Copy state       |   Copy the current state of all selected paths. Works with multiple selections, including mask paths.     |
 |     SHIFT     |  Copy selected points only       |   Copy only the currently selected points from each path (partial copy). Useful when you want to lock down specific control points without affecting the rest of the path.     |
-|     OPT/ALT     |    Paste to current frame      |  Paste the copied state to the current time.       |
-|     SHIFT + OPT/ALT     |    Paste to all keyframes in work area      |  Pastes the copied points to every keyframe within the work area for each affected path. After copying selected points with SHIFT, set the work area to the target range and use this to apply the fix across all keyframes at once.       |
+|     CMD/CTRL     |    Paste to current frame      |  Paste the copied state to the current time.       |
+|     SHIFT + CMD/CTRL     |    Paste to all keyframes in work area      |  Pastes the copied points to every keyframe within the work area for each affected path. After copying selected points with SHIFT, set the work area to the target range and use this to apply the fix across all keyframes at once.       |
 
 > Mask path support respects the **Affect Masks** setting.
 
 **How to use (Copy / Paste full state):**
 1. Select one or more points in the comp viewer (accepts more than one path) and press the button.
 2. Move the timeline to the desired point in time.
-3. Hold OPT/ALT and press the button to paste the copied shape state to the current time.
+3. Hold CMD/CTRL and press the button to paste the copied shape state to the current time.
 
 **How to use (Copy / Paste selected points across keyframes):**
 1. Select the specific points you want to lock down in the comp viewer.
 2. Hold SHIFT and press the button to copy those points.
 3. Set the work area to the range of keyframes you want to update.
-4. Hold SHIFT + OPT/ALT and press the button to paste those points to every keyframe within the work area.
+4. Hold SHIFT + CMD/CTRL and press the button to paste those points to every keyframe within the work area.
 
 > Pasting only works if you keep the same paths selected.
 
@@ -183,13 +183,13 @@ Align points precisely on top of each other, or straighten them into a line. Wor
   <img src="assets/bt-key.svg" width="50" style="max-width: 50px;" />
   <span>Add Keyframes</span>
 </h4>
-Add keyframes to path properties.
+Add keyframes to path properties. Works across all selected shape layers simultaneously.
 <br>
 <br>
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
-|     -     |  Add keyframes     |   Add a keyframe to selected paths. If no path is selected, adds a keyframe to all paths in the layer.    |
+|     -     |  Add keyframes     |   Add a keyframe to selected paths. If no path is selected, adds a keyframe to all paths in the layer. Works on all selected layers at once.    |
 
 
 ---
@@ -247,7 +247,21 @@ This button has double function:
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
 |     -     |  Create new layer with linked Masks     |   Creates another shape layer with masks attached to the current selection.<br>   |
-|     OPT/ALT     |    Apply Masks to a layer     |  <img src="assets/gifs/create-mask-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/><br><br>Opens up a dialog for you to choose the target layer for the masks. Works for any type of layer.<br><br>After creation, the masks will remain linked to the original paths, even if you move the layer around.<br>If the "Subtract" checkbox is checked, "Subtract" masks will be created. Otherwise, "Add" masks will be created.|
+|     CMD/CTRL     |    Apply Masks to a layer     |  Opens a dialog to choose the target layer for the masks. Works for any type of layer. After creation, the masks remain linked to the original paths even if you move the layer around. See dialog options below.   |
+
+**CMD/CTRL dialog options (remembered between sessions):**
+
+<img src="assets/gifs/create-mask-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/>
+
+> 📸 *[Image needed: updated screenshot of the Apply to Layer dialog — showing Subtract mode, Include strokes, and direction options]*
+
+- **Subtract** — when checked, creates Subtract masks instead of Add masks.
+- **Include strokes** — when enabled, sets Mask Expansion on the created mask, linked to the source shape's stroke width. Expression-driven and respects stroke visibility dynamically.
+
+| Direction | Behavior |
+| --------- | -------- |
+| Inside − *(default)* | Contracts the mask to the inner stroke edge — the stroke appears outside the mask. |
+| Outside + | Expands the mask to the outer stroke edge — the stroke appears inside the mask. |
 
 
 
@@ -284,9 +298,34 @@ This button has triple function:
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
-|     -     |  Create Clipping Mask     |  Select a shape and press this button, then choose another shape to act as the mask. Cleanup Master will automatically create the full Merge Paths hierarchy, clipping the first shape with the second.     |
+|     -     |  Create Clipping Mask     |  Select a shape and press this button, then choose another shape to act as the mask. A dialog lets you set the options below before applying. Cleanup Master will automatically create the full Merge Paths hierarchy, clipping the first shape with the second.     |
 |     OPT/ALT     |    Remove Masks from selected     |  Removes the masks from the selected shapes and return them to the original condition.|
 |     CMD/CTRL     |    Convert Strokes to Fills     |  <img src="assets/gifs/clippingmasks_stroketofills_01.gif" width="100%" style="max-width:400px; height:auto; align: center;"/>  <img src="assets/gifs/clippingmasks_stroketofills_01_taper.gif" width="100%" style="max-width:400px; height:auto; align: center;"/><br><br>When clipping strokes, After Effects closes the resulting shape by default. This function avoids that by generating a filled shape that perfectly matches the original stroke, allowing strokes to be clipped just like any other shape. <strong>It supports all cap/join modes and TAPER!</strong><br><br><strong>The script will add 3 effects to your shape layer. </strong><br><br>You can:<br><br>• Control the resolution of the shape by adjusting the samples. <br>• Control the resolution of the line caps by changing the Cap Steps.<br>• Temporatily disable the shape to reduce point clutter by checking the checkbox.<br><br><img src="assets/gifs/strokes_to_fills_sliders.png" width="100%" style="max-width:400px; height:auto; align: center;"/> |
+
+**Dialog options (remembered between sessions):**
+
+<img src="assets/gifs/clipping-masks-dialog.png" alt="Clipping Masks dialog" width="100%" style="max-width:280px; height:auto; align: center;"/>
+
+> 📸 *[Image needed: screenshot of the Clipping Masks dialog — mode dropdown and Include strokes options]*
+
+**Mode** — sets the Merge Paths blend mode applied to the mask group:
+
+| Mode | Description |
+| ---- | ----------- |
+| Merge | Standard merge. |
+| Add | Adds the shapes together. |
+| Subtract | Subtracts the mask shape. |
+| Intersect | Shows only the overlapping area. *(default)* |
+| Exclude Intersections | Excludes the overlapping area. |
+
+**Include strokes** — when enabled, adds an Offset Paths modifier to the mask group. The offset amount is expression-linked to the stroke widths of both shapes, so the clipping boundary automatically accounts for strokes.
+
+| Direction | Behavior |
+| --------- | -------- |
+| Inside − *(default)* | Offsets inward — the stroke sits outside the clipping boundary. |
+| Outside + | Offsets outward — the stroke sits inside the clipping boundary. |
+
+> The selected shape's stroke is only included if it is currently visible — toggling stroke visibility in AE adjusts the offset live.
 
 
 
