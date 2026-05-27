@@ -38,7 +38,7 @@
 
 <strong>:: RENAME ::</strong>
 
-- Expression references that use a variable to hold a layer (`var src = thisComp.layer("X"); src.content("Y")`) are now correctly updated when renaming a shape group. Previously only direct inline chains (`thisComp.layer("X").content("Y")`) were updated.
+- Updates to the renamer engine to prevent expression breaking in some situations.
 
 ---
 
