@@ -18,7 +18,11 @@
 
 <strong>:: CREATE MASKS FROM PATHS ::</strong>
 
-- New Include strokes option (in the CMD/CTRL dialog): sets Mask Expansion on the created mask, linked to the source shape's stroke width. Inside − contracts to the inner stroke edge; Outside + expands to the outer stroke edge. Expression-driven and respects stroke visibility.
+- A dialog now always opens (no modifier needed) with all options in one place:
+  - **Target layer** dropdown: choose **New shape layer** to create a dedicated mask layer above the source, or pick any existing layer to apply masks directly to it.
+  - **Subtract**: applies masks in Subtract mode.
+  - **Include strokes** + **Inside −** / **Outside +**: sets Mask Expansion linked to the shape's stroke width. Expansion is expression-driven and respects stroke visibility dynamically.
+  - All choices persist between sessions.
 
 <h3 style="color:#e94934">CHANGED</h3>
 
@@ -26,15 +30,15 @@
 
 - Paste modifier changed from OPT/ALT to CMD/CTRL (and SHIFT + OPT/ALT to SHIFT + CMD/CTRL). OPT/ALT is now consistently used for delete/remove across all buttons.
 
-<strong>:: CREATE MASKS FROM PATHS ::</strong>
-
-- Apply to layer dialog now opens with CMD/CTRL (was OPT/ALT).
-
 <h3 style="color:#e94934">FIXED</h3>
 
 <strong>:: ADD KEYFRAMES ::</strong>
 
 - Now correctly adds keyframes across all selected shape layers simultaneously (previously only affected the first selected layer).
+
+<strong>:: RENAME ::</strong>
+
+- Expression references that use a variable to hold a layer (`var src = thisComp.layer("X"); src.content("Y")`) are now correctly updated when renaming a shape group. Previously only direct inline chains (`thisComp.layer("X").content("Y")`) were updated.
 
 ---
 

@@ -240,20 +240,21 @@ If you are familiar with shape layers in After Effects you probably know that de
 />
 <br>
 <br>
-This button has double function:
-<br>
-<br>
 
-| Modifier | Function | Action |
-| -------- | :------: | ------ |
-|     -     |  Create new layer with linked Masks     |   Creates another shape layer with masks attached to the current selection.<br>   |
-|     CMD/CTRL     |    Apply Masks to a layer     |  Opens a dialog to choose the target layer for the masks. Works for any type of layer. After creation, the masks remain linked to the original paths even if you move the layer around. See dialog options below.   |
-
-**CMD/CTRL dialog options (remembered between sessions):**
+Clicking the button always opens a dialog where you choose where the masks go and how strokes are handled. The masks remain linked to the original paths even if you move the target layer around.
 
 <img src="assets/gifs/create-mask-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/>
 
-> 📸 *[Image needed: updated screenshot of the Apply to Layer dialog — showing Subtract mode, Include strokes, and direction options]*
+> 📸 *[Image needed: screenshot of the Create Masks from Paths dialog — target layer dropdown, Subtract, Include strokes, and direction options]*
+
+**Dialog options (remembered between sessions):**
+
+- **Target layer** — choose where the masks are created:
+
+| Option | Behavior |
+| ------ | -------- |
+| New shape layer *(default)* | Creates a new dedicated shape layer with the masks, placed directly above the source layer and parented to it. |
+| Any existing layer | Applies the masks directly to that layer. Works for any layer type. |
 
 - **Subtract** — when checked, creates Subtract masks instead of Add masks.
 - **Include strokes** — when enabled, sets Mask Expansion on the created mask, linked to the source shape's stroke width. Expression-driven and respects stroke visibility dynamically.
