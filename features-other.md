@@ -308,6 +308,8 @@ This button has triple function:
 
 <img src="assets/gifs/clipping-masks-dialog.png" alt="Clipping Masks dialog" width="100%" style="max-width:350px; height:auto; align: center;"/>
 <br>
+<br>
+
 **Mode** — sets the Merge Paths blend mode applied to the mask group:
 
 | Mode | Description |
