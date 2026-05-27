@@ -15,8 +15,9 @@
 <br>
 
 When working on a complex shape layer, it is easy to accidentally move points that should not be touched. Isolate Selection locks all paths in the layer except the ones you select, keeping everything else frozen in place while you edit.
-
+<br><br>
 The button icon changes when isolation is active. Click it again to release all locks.
+<br><br>
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
@@ -109,6 +110,7 @@ This button has quadruple function:
 1. Select one or more points in the comp viewer (accepts more than one path) and press the button.
 2. Move the timeline to the desired point in time.
 3. Hold CMD/CTRL and press the button to paste the copied shape state to the current time.
+<br><br>
 
 **How to use (Copy / Paste selected points across keyframes):**
 1. Select the specific points you want to lock down in the comp viewer.
@@ -136,16 +138,21 @@ This button has quadruple function:
 
 Tweak Path lets you make a shape correction on a single frame and automatically apply those changes to all keyframes within the work area, accounting for how the path is deforming at each frame. It's like "find and replace" for shape edits. Works on both shape paths and mask paths (when **Affect Masks** is enabled).
 
-**This is a two-step process:**
+<br>
+
+**THIS IS A TWO-STEP PROCESS:**
+<br><br>
 
 **Step 1 - Register a baseline:**
 1. Select the points you want to adjust in the comp viewer.
 2. Click the button to register the current state of those points as the baseline. The button icon will change to signal that a baseline is active.
+<br><br>
 
 **Step 2 - Apply the tweak:**
 1. Adjust the path at the baseline frame - move the points to where they should be.
 2. Set the work area to the range of keyframes you want to update.
 3. Click the button again to apply the delta to all keyframes in the work area.
+<br><br>
 
 | Modifier | Function | Action |
 | -------- | :------: | ------ |
@@ -242,28 +249,29 @@ If you are familiar with shape layers in After Effects you probably know that de
 <br>
 
 Clicking the button always opens a dialog where you choose where the masks go and how strokes are handled.<br>The masks remain linked to the original paths even if you move the target layer around.
-<br>
+<br><br>
 
 <img src="assets/gifs/create-mask-dialog.png" width="100%" style="max-width:350px; height:auto; align: center;"/>
 <br>
 <br>
 
 **Dialog options (remembered between sessions):**
+<br>
 
-- **Target layer** — choose where the masks are created:
+- **Target layer:** choose where the masks are created:
 
 | Option | Behavior |
 | ------ | -------- |
 | New shape layer *(default)* | Creates a new dedicated shape layer with the masks, placed directly above the source layer and parented to it. |
 | Any existing layer | Applies the masks directly to that layer. Works for any layer type. |
 
-- **Subtract** — when checked, creates Subtract masks instead of Add masks.
-- **Include strokes** — when enabled, sets Mask Expansion on the created mask, linked to the source shape's stroke width. Expression-driven and respects stroke visibility dynamically.
+- **Subtract:** when checked, creates Subtract masks instead of Add masks.
+- **Include strokes:** when enabled, sets Mask Expansion on the created mask, linked to the source shape's stroke width. Expression-driven and respects stroke visibility dynamically.
 
 | Direction | Behavior |
 | --------- | -------- |
-| Inside − *(default)* | Contracts the mask to the inner stroke edge — the stroke appears outside the mask. |
-| Outside + | Expands the mask to the outer stroke edge — the stroke appears inside the mask. |
+| Inside − *(default)* | Contracts the mask to the inner stroke edge. |
+| Outside + | Expands the mask to the outer stroke edge. |
 
 
 
@@ -310,7 +318,7 @@ This button has triple function:
 <br>
 <br>
 
-**Mode** — sets the Merge Paths blend mode applied to the mask group:
+**Mode:** sets the Merge Paths blend mode applied to the mask group:
 
 | Mode | Description |
 | ---- | ----------- |
@@ -320,12 +328,12 @@ This button has triple function:
 | Intersect | Shows only the overlapping area. *(default)* |
 | Exclude Intersections | Excludes the overlapping area. |
 
-**Include strokes** — when enabled, adds an Offset Paths modifier to the mask group. The offset amount is expression-linked to the stroke widths of both shapes, so the clipping boundary automatically accounts for strokes.
+**Include strokes:** when enabled, adds an Offset Paths modifier to the mask group. The offset amount is expression-linked to the stroke widths of both shapes, so the clipping boundary automatically accounts for strokes.
 
 | Direction | Behavior |
 | --------- | -------- |
-| Inside − *(default)* | Offsets inward — the stroke sits outside the clipping boundary. |
-| Outside + | Offsets outward — the stroke sits inside the clipping boundary. |
+| Inside − *(default)* | Offsets inward, so the shapes are contained inside the strokes. |
+| Outside + | Offsets outward, so the shapes sit on top of the strokes. |
 
 > The selected shape's stroke is only included if it is currently visible — toggling stroke visibility in AE adjusts the offset live.
 
