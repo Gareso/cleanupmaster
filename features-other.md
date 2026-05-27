@@ -244,7 +244,7 @@ If you are familiar with shape layers in After Effects you probably know that de
 Clicking the button always opens a dialog where you choose where the masks go and how strokes are handled. The masks remain linked to the original paths even if you move the target layer around.
 
 <img src="assets/gifs/create-mask-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/>
-
+<br>
 **Dialog options (remembered between sessions):**
 
 - **Target layer** — choose where the masks are created:
@@ -304,7 +304,7 @@ This button has triple function:
 **Dialog options (remembered between sessions):**
 
 <img src="assets/gifs/clipping-masks-dialog.png" alt="Clipping Masks dialog" width="100%" style="max-width:280px; height:auto; align: center;"/>
-
+<br>
 **Mode** — sets the Merge Paths blend mode applied to the mask group:
 
 | Mode | Description |
