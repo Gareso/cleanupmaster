@@ -245,8 +245,6 @@ Clicking the button always opens a dialog where you choose where the masks go an
 
 <img src="assets/gifs/create-mask-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/>
 
-> 📸 *[Image needed: screenshot of the Create Masks from Paths dialog — target layer dropdown, Subtract, Include strokes, and direction options]*
-
 **Dialog options (remembered between sessions):**
 
 - **Target layer** — choose where the masks are created:
@@ -306,8 +304,6 @@ This button has triple function:
 **Dialog options (remembered between sessions):**
 
 <img src="assets/gifs/clipping-masks-dialog.png" alt="Clipping Masks dialog" width="100%" style="max-width:280px; height:auto; align: center;"/>
-
-> 📸 *[Image needed: screenshot of the Clipping Masks dialog — mode dropdown and Include strokes options]*
 
 **Mode** — sets the Merge Paths blend mode applied to the mask group:
 
