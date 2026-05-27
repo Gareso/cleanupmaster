@@ -241,7 +241,7 @@ If you are familiar with shape layers in After Effects you probably know that de
 <br>
 <br>
 
-Clicking the button always opens a dialog where you choose where the masks go and how strokes are handled. The masks remain linked to the original paths even if you move the target layer around.
+Clicking the button always opens a dialog where you choose where the masks go and how strokes are handled.<br>The masks remain linked to the original paths even if you move the target layer around.
 
 <img src="assets/gifs/create-mask-dialog.png" width="100%" style="max-width:250px; height:auto; align: center;"/>
 <br>
