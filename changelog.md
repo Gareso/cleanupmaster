@@ -9,10 +9,11 @@
 
 <strong>:: ISOLATE MASKS ::</strong>
 
-- Isolated masks are now locked with expressions, making them visually distinct from regular masks directly in After Effects.
+- Isolated masks are now locked with expressions, making them distinct from regular masks..
 
 <strong>:: TWEAK PATHS ::</strong>
 
+- Overall logic updated with improved results.
 - Collapsed vertices in the baseline stay collapsed across the entire animation.
 - Separate shapes now automatically follow their parent shape's deformation, and joint connection points stay welded across keyframes.
 
