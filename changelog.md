@@ -3,6 +3,25 @@
 
 ---
 
+### v1.2.6 - June 2026
+
+<h3 style="color:#e94934">IMPROVED</h3>
+
+<strong>:: ISOLATE MASKS ::</strong>
+
+- Isolated masks are now locked with expressions, making them visually distinct from regular masks directly in After Effects.
+
+<strong>:: TWEAK PATHS ::</strong>
+
+- Collapsed vertices in the baseline stay collapsed across the entire animation.
+- Separate shapes now automatically follow their parent shape's deformation, and joint connection points stay welded across keyframes.
+
+<strong>:: ALIGN & COLLAPSE POINTS ::</strong>
+
+- Undo history is now clean: one step per operation, no invisible intermediate steps.
+
+---
+
 ### v1.2.5 - May 2026
 
 <h3 style="color:#e94934">ADDED</h3>
