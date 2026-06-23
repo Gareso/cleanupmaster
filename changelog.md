@@ -3,6 +3,16 @@
 
 ---
 
+### v1.2.6a - June 2026
+
+<h3 style="color:#e94934">FIXED</h3>
+
+<strong>:: CREATE MASKS FROM PATHS ::</strong>
+
+- Fixed an issue where only one mask was created regardless of how many paths were selected, and the Subtract option was ignored.
+
+---
+
 ### v1.2.6 - June 2026
 
 <h3 style="color:#e94934">IMPROVED</h3>
