@@ -3,6 +3,16 @@
 
 ---
 
+### v1.2.6b - June 2026
+
+<h3 style="color:#e94934">FIXED</h3>
+
+<strong>:: TWEAK PATH ::</strong>
+
+- Fixed an issue where, in some cases, shapes that weren't part of the baseline could be included in the changes.
+
+---
+
 ### v1.2.6a - June 2026
 
 <h3 style="color:#e94934">FIXED</h3>
