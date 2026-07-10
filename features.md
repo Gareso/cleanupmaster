@@ -32,16 +32,17 @@
   style="max-width:800px; height:auto; align: center;"
 />
 
-1. **Isolate Selection**
-2. **Renamer / Selector**
-3. **Clone & Invert Opacity**
-4. **Copy / Paste Shape States**
-5. **Tweak Path**
-6. **Collapse Points**
-7. **Add Keyframes**
-8. **Delete Points (Keeping Animation)**
-9. **Create Masks from Paths**
-10. **Create Clipping Mask**
-11. **Create Shade Group**
-12. **Zero Transforms**
-13. **Remove Expressions**
+1. **Onion Skin**
+2. **Isolate Selection**
+3. **Renamer / Selector**
+4. **Clone & Invert Opacity**
+5. **Copy / Paste Shape States**
+6. **Tweak Path**
+7. **Collapse Points**
+8. **Add Keyframes**
+9. **Delete Points (Keeping Animation)**
+10. **Create Masks from Paths**
+11. **Create Clipping Mask**
+12. **Create Shade Group**
+13. **Zero Transforms**
+14. **Remove Expressions**

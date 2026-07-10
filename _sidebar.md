@@ -16,6 +16,7 @@
     * [- Create Null to Follow Points](features-linking.md#nulls)       
     * [- Trace Path](features-linking.md#trace)
   * [Other Tools](features-other.md#other-tools)
+    * [- Onion Skin](features-other.md#onion)
     * [- Isolate Selection](features-other.md#isolate)
     * [- Renamer / Selector](features-other.md#renamer)     
     * [- Clone & Invert Opacity](features-other.md#invert)       

@@ -1,5 +1,34 @@
 # Other Tools
 ---
+<h4  id="onion" style="display: flex; align-items: center; gap: 10px;">
+  <img src="assets/bt-onionskin.svg" width="50" style="max-width: 50px;" />
+  <span>Onion Skin</span>
+</h4>
+
+<img
+  src="assets/gifs/onion_skin.gif"
+  alt="Onion Skin"
+  width="100%"
+  style="max-width:650px; height:auto; align: center;"
+/>
+
+<br>
+
+Shows forward and backward ghost overlays of nearby frames on the selected layer, so you can see where a shape is coming from and going to while animating — like a traditional animator's onion skin. Your artwork itself is never touched; the overlay is excluded from renders and nested comps.
+<br><br>
+
+| Modifier | Function | Action |
+| -------- | :------: | ------ |
+| Click | Activate / Deactivate | Select a layer and click to turn its onion skin on. Click again on a layer that's currently active to turn off every onion skin in the comp. Works on multiple selected layers at once. |
+| SHIFT | Add / Remove | Adds a parallel onion skin on the selected layer, or removes just that layer's onion skin if it already has one. |
+| OPT/ALT | Remove All | Removes every onion skin setup in the comp. |
+| CMD/CTRL | Settings | <img src="assets/gifs/onion-skin-settings-dialog.png" width="100%" style="max-width:350px; height:auto; align: center;"/><br><br>Opens the Onion Skin settings: steps forward/backward, colors (or no color), transparency, decay, and Behind/Blend/On Top positioning. Changes apply live to every onion skin already active in the comp. |
+
+```
+💡 TIP: Great for checking timing and spacing while animating walk cycles or any frame-by-frame motion.
+```
+
+---
 <h4  id="isolate" style="display: flex; align-items: center; gap: 10px;">
   <img src="assets/bt-isolateselection.svg" width="50" style="max-width: 50px;" />
   <span>Isolate Selection</span>
