@@ -5,16 +5,9 @@
   <span>Onion Skin</span>
 </h4>
 
-<img
-  src="assets/gifs/onion_skin.gif"
-  alt="Onion Skin"
-  width="100%"
-  style="max-width:650px; height:auto; align: center;"
-/>
+<!-- TODO: replace with <img src="assets/gifs/onion_skin.gif" width="100%" style="max-width:650px; height:auto; align: center;" /> once the demo gif exists -->
 
-<br>
-
-Shows forward and backward ghost overlays of nearby frames on the selected layer, so you can see where a shape is coming from and going to while animating — like a traditional animator's onion skin. Your artwork itself is never touched; the overlay is excluded from renders and nested comps.
+Shows forward and backward ghost overlays of nearby frames on the selected layer for reference. The onion skin is excluded from renders and nested comps.
 <br><br>
 
 | Modifier | Function | Action |
@@ -23,10 +16,6 @@ Shows forward and backward ghost overlays of nearby frames on the selected layer
 | SHIFT | Add / Remove | Adds a parallel onion skin on the selected layer, or removes just that layer's onion skin if it already has one. |
 | OPT/ALT | Remove All | Removes every onion skin setup in the comp. |
 | CMD/CTRL | Settings | <img src="assets/gifs/onion-skin-settings-dialog.png" width="100%" style="max-width:350px; height:auto; align: center;"/><br><br>Opens the Onion Skin settings: steps forward/backward, colors (or no color), transparency, decay, and Behind/Blend/On Top positioning. Changes apply live to every onion skin already active in the comp. |
-
-```
-💡 TIP: Great for checking timing and spacing while animating walk cycles or any frame-by-frame motion.
-```
 
 ---
 <h4  id="isolate" style="display: flex; align-items: center; gap: 10px;">
@@ -193,7 +182,7 @@ Tweak Path lets you make a shape correction on a single frame and automatically 
 💡 TIP: Set a tight work area around only the keyframes that need the correction. Keyframes outside the work area are left untouched.
 ```
 
-<div class="alert-note"> ⚠️ If a keyframe in the work area has a different point count than the baseline, the correction may not land as expected — narrow the work area to exclude it. </div>
+<div class="alert-note"> ⚠️ If a keyframe in the work area has a different point count than the baseline, the correction may not land as expected. Narrow the work area to exclude it. </div>
 
 ---
 <h4  id="collapse" style="display: flex; align-items: center; gap: 10px;">
@@ -364,7 +353,7 @@ This button has triple function:
 | Inside − *(default)* | Offsets inward, so the shapes are contained inside the strokes. |
 | Outside + | Offsets outward, so the shapes sit on top of the strokes. |
 
-> The selected shape's stroke is only included if it is currently visible — toggling stroke visibility in AE adjusts the offset live.
+> The selected shape's stroke is only included if it is currently visible. Toggling stroke visibility in AE adjusts the offset live.
 
 
 
@@ -400,11 +389,13 @@ This tool will create a clone of the current shape layer with only the selected 
 
 | Modifier | Behavior |
 | -------- | -------- |
-| - | Creates the shade group as usual. |
-| CMD/CTRL | Creates the shade group and hides the selected original shapes (eye off). The clone's opacity dynamically references the original's opacity; keyframes and static values are respected live. |
-| SHIFT | Toggles the hidden originals visible/hidden for editing. Use this when you need to access the original shapes. |
+| - | Creates the shade group using whatever's currently saved in Shade Group settings (see CMD/CTRL below). |
+| SHIFT | Toggles the hidden originals visible/hidden for editing. Works even if the shade group layer itself is selected: it resolves to the original automatically, switches selection to it while editing, then restores whatever was selected before once you toggle back off. |
 | OPT/ALT on shade group layer | Deletes the shade group and restores all hidden originals on the source layer. |
 | OPT/ALT on source layer | Restores only the selected hidden groups on that layer. |
+| CMD/CTRL | <!-- TODO: replace with <img src="assets/gifs/shade-group-settings-dialog.png" width="100%" style="max-width:350px; height:auto; align: center;" /> once the settings dialog screenshot exists --> Opens the Shade Group settings.<br><br>**Hide Originals** *(off by default)*: when creating a shade group, hides the selected original shapes (eye off) instead of leaving them visible alongside the clone.<br><br>**Properties linked to original** *(all on by default)*: Fills (including gradient fills), Strokes, Shape Transforms, Layer Transforms, and Shape Modifiers (Merge Paths, Offset Paths, Pucker & Bloat, and every other path operation). Any of these left unchecked has its link to the original removed right after the shade group is created, instead of tracking it live. |
+
+> When Hide Originals is on, the clone's opacity dynamically references the original's: keyframes and static values are respected live, as long as Shape Transforms (which includes opacity) stays linked.
 
 **Use this for:**
 1. Combining shapes together for shading (adding inner shadow, inner glow effect, and so on...)

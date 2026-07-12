@@ -3,6 +3,21 @@
 
 ---
 
+### v1.3.0 - July 2026
+
+<h3 style="color:#e94934">ADDED</h3>
+
+<strong>:: ONION SKIN ::</strong>
+
+- New tool: forward/backward ghost overlays of nearby frames on the selected layer, for reference while animating. Excluded from renders and nested comps.
+
+<strong>:: CREATE SHADE GROUP ::</strong>
+
+- CMD/CTRL now opens a Shade Group settings dialog: Hide Originals, and which properties (Fills, Strokes, Shape Transforms, Layer Transforms) stay linked to the original. A plain click always uses the current settings.
+- SHIFT toggle for editing now works when the shade group layer itself is selected, and remembers your selection so toggling back off returns to it.
+
+---
+
 ### v1.2.6b - June 2026
 
 <h3 style="color:#e94934">FIXED</h3>
