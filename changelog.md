@@ -11,9 +11,11 @@
 
 - New tool: forward/backward ghost overlays of nearby frames on the selected layer, for reference while animating. Excluded from renders and nested comps.
 
+<h3 style="color:#e94934">CHANGED</h3>
+
 <strong>:: CREATE SHADE GROUP ::</strong>
 
-- CMD/CTRL now opens a Shade Group settings dialog: Hide Originals, and which properties (Fills, Strokes, Shape Transforms, Layer Transforms) stay linked to the original. A plain click always uses the current settings.
+- CMD/CTRL now opens a Shade Group settings dialog: Hide Originals, and which properties (Fills, Strokes, Shape Transforms, Layer Transforms, Shape Modifiers) stay linked to the original. A plain click always uses the current settings.
 - SHIFT toggle for editing now works when the shade group layer itself is selected, and remembers your selection so toggling back off returns to it.
 
 ---
