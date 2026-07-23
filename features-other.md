@@ -5,7 +5,7 @@
   <span>Onion Skin</span>
 </h4>
 
-<!-- TODO: replace with <img src="assets/gifs/onion_skin.gif" width="100%" style="max-width:650px; height:auto; align: center;" /> once the demo gif exists -->
+<img src="assets/gifs/onion_skin.gif" alt="Onion Skin" width="100%" style="max-width:650px; height:auto; align: center;" />
 
 Shows forward and backward ghost overlays of nearby frames on the selected layer for reference. The onion skin is excluded from renders and nested comps.
 <br><br>
