@@ -6,7 +6,7 @@
 </h4>
 
 <img src="assets/gifs/onion_skin.gif" alt="Onion Skin" width="100%" style="max-width:550px; height:auto; align: center;" />
-
+<br>
 Shows forward and backward ghost overlays of nearby frames on the selected layer for reference. The onion skin is excluded from renders and nested comps.
 <br><br>
 
