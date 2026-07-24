@@ -124,6 +124,8 @@ body {
       background-position: center center !important;
       background-size: 100% 100% !important; /* Stretches to fill exactly 100% width and height, distorting if needed */
       z-index: 100;
+      min-height: 100vh;
+      min-height: 100dvh;
 
       /* Default background image (e.g., for landscape orientation or desktop) */
       background-image: url('assets/frame.svg') !important;
