@@ -3,6 +3,16 @@
 
 ---
 
+### v1.3.0c - July 2026
+
+<h3 style="color:#e94934">FIXED</h3>
+
+<strong>:: ONION SKIN ::</strong>
+
+- Fixed an error on some AE versions when using the tool.
+
+---
+
 ### v1.3.0 - July 2026
 
 <h3 style="color:#e94934">ADDED</h3>
