@@ -187,8 +187,60 @@
       sidebarDisplayLevel: 1,
       subMaxLevel: 1,
       logo:        'assets/cleanupMaster.svg',
+      // namespace bump forces visitors' cached (unclean) search index to rebuild
+      search: {
+        namespace: 'cm-clean-1'
+      },
       // added: reinit after each page render
       plugins: [
+        // search indexes raw markdown, so inline HTML and markdown syntax leak into
+        // result snippets. Docsify core fetches pages with its internal get(), and
+        // only plugins go through window.Docsify.get, so cleaning here affects the
+        // search index only, never the rendered pages.
+        function (hook) {
+          hook.init(function () {
+            var origGet = window.Docsify.get;
+            window.Docsify.get = function (url) {
+              var req = origGet.apply(this, arguments);
+              if (!/\.md(\?|#|$)/.test(url)) return req;
+              return {
+                then: function (success, error) {
+                  return req.then(function (text, opt) {
+                    success(cleanForSearch(text), opt);
+                  }, error);
+                }
+              };
+            };
+          });
+
+          function cleanForSearch(md) {
+            var lines = (md || '')
+              .replace(/<!--[\s\S]*?-->/g, '')
+              .replace(/<(style|script|iframe)\b[\s\S]*?<\/\1>/gi, '')
+              .replace(/<br\s*\/?>/gi, ' ')
+              .replace(/<\/?(div|p|ul|ol|li|h[1-6]|table|tr)\b[^>]*>/gi, '\n')
+              .replace(/<\/?[a-zA-Z][^>]*>/g, '')
+              .replace(/&nbsp;/g, ' ')
+              .replace(/&quot;/g, '"')
+              .replace(/&#39;|&apos;/g, "'")
+              .replace(/&lt;/g, '<')
+              .replace(/&gt;/g, '>')
+              .replace(/&amp;/g, '&')
+              .split('\n');
+            var inFence = false;
+            return lines.map(function (line) {
+              if (/^\s*(```|~~~)/.test(line)) { inFence = !inFence; return line; }
+              if (inFence) return line;
+              return line
+                .replace(/!\[([^\]]*)\]\([^)]*\)/g, '$1')
+                .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
+                .replace(/(\*\*|__)(.+?)\1/g, '$2')
+                .replace(/(^|[^*\w])\*(?!\s)([^*]+?)\*/g, '$1$2')
+                .replace(/`([^`]+)`/g, '$1')
+                .replace(/[ \t]{2,}/g, ' ');
+            }).join('\n');
+          }
+        },
         function (hook) {
           hook.doneEach(function () {
             setTimeout(initializeYouTubePlayer, 0);
