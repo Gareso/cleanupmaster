@@ -119,7 +119,7 @@ This button has quadruple function:
 | -------- | :------: | ------ |
 |     -     |  Copy state       |   Copy the current state of all selected paths. Works with multiple selections, including mask paths.     |
 |     SHIFT     |  Copy selected points only       |   Copy only the currently selected points from each path (partial copy). Useful when you want to lock down specific control points without affecting the rest of the path.     |
-|     CMD/CTRL     |    Paste to current frame      |  Paste the copied state to the current time.       |
+|     CMD/CTRL     |    Paste to current frame      |  Paste the copied state to the current time. After a SHIFT copy, pastes just those points to the current frame.       |
 |     SHIFT + CMD/CTRL     |    Paste to all keyframes in work area      |  Pastes the copied points to every keyframe within the work area for each affected path. After copying selected points with SHIFT, set the work area to the target range and use this to apply the fix across all keyframes at once.       |
 
 > Mask path support respects the **Affect Masks** setting.

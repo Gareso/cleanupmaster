@@ -22,7 +22,8 @@
 
 1. [**Parent Shape Groups to Null**](features-linking.md#parent)
 2. [**Nulls Follow Points**](features-linking.md#nulls)
-3. [**Trace Path**](features-linking.md#trace)
+3. [**Points Follow Nulls**](features-linking.md#pointsfollow)
+4. [**Trace Path**](features-linking.md#trace)
 ---
 ### [Other Tools](features-other.md#other-tools)
 <img

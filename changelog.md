@@ -3,6 +3,30 @@
 
 ---
 
+### v1.4.0 - November 2026
+
+<h3 style="color:#e94934">ADDED</h3>
+
+<strong>:: POINTS FOLLOW NULLS ::</strong>
+
+- New tool: pins selected points to Nulls, including their handles. Other points keep their animation. Includes handle Nulls (CMD/CTRL) and an edit mode (SHIFT).
+
+<strong>:: CONTROL NULLS ::</strong>
+
+- New option in Settings: linking tools can create small guide shape layers (no Solids in the project) or regular Nulls, with your choice of size and colors. Shape layers add a Hide Nulls checkbox.
+
+<h3 style="color:#e94934">IMPROVED</h3>
+
+- **Parent Shape Groups to Null:** groups follow the Null's scale too, including from parented Nulls. Stroke widths are kept.
+- **Create Nulls to Follow Points / Trace Path:** work on parented and transformed groups.
+- **Copy / Paste:** CMD/CTRL pastes partially copied points to the current frame.
+
+<h3 style="color:#e94934">FIXED</h3>
+
+- Trace Path rotation now includes the layer's rotation.
+
+---
+
 ### v1.3.0c - July 2026
 
 <h3 style="color:#e94934">FIXED</h3>
