@@ -13,11 +13,11 @@
 
 <strong>:: CONTROL NULLS ::</strong>
 
-- New option in Settings: linking tools can create small guide shape layers (no Solids in the project) or regular Nulls, with your choice of size and colors. Shape layers add a Hide Nulls checkbox.
+- New option in Settings: linking tools can create small guide shape layers (no Solids in the project) or regular Nulls, with their own size and colors for each tool. Shape layers add a Hide Nulls checkbox.
 
 <h3 style="color:#e94934">IMPROVED</h3>
 
-- **Parent Shape Groups to Null:** groups follow the Null's scale too, including from parented Nulls. Stroke widths are kept.
+- **Parent Shape Groups to Null:** groups follow rotation the Null inherits from its own parents, and can be parented to Nulls that follow points on the same layer.
 - **Create Nulls to Follow Points / Trace Path:** work on parented and transformed groups.
 - **Copy / Paste:** CMD/CTRL pastes partially copied points to the current frame.
 

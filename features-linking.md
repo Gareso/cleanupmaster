@@ -18,7 +18,7 @@ It has triple function:
 
 | Modifier       | Function | Action                       |
 | ------------- | :--------: | --------------------------- |
-| -      |    Parent Shape Groups to a Null    | <img src="assets/gifs/parent_dialog.jpg" width="100%" style="max-width:600px; height:auto; align: center;"/><br><br>**How to use:**<br>1. Select one or more points in the comp viewer or shape groups in the timeline<br>2. Click the button<br>3. A dialog will appear with a dropdown. Select the Null you want to parent your shape groups to.<br><br>The group follows the Null's **position, rotation and scale**, including anything the Null inherits from its own parents. Strokes inside the group keep their width while it scales. |
+| -      |    Parent Shape Groups to a Null    | <img src="assets/gifs/parent_dialog.jpg" width="100%" style="max-width:600px; height:auto; align: center;"/><br><br>**How to use:**<br>1. Select one or more points in the comp viewer or shape groups in the timeline<br>2. Click the button<br>3. A dialog will appear with a dropdown. Select the Null you want to parent your shape groups to.<br><br>The group follows the Null's **position and rotation**, including anything the Null inherits from its own parents. |
 | OPT/ALT |   Remove Parent from selected     | Removes the parent from the selected shape groups, keeping current position.|
 | SHIFT |  Parent 'Parent' Group   | If the selected shape(s) are nested within another group, when holding shift, the function will target the parent group, not the selected shapes. |
 
@@ -64,7 +64,7 @@ Pins each selected point to a new Null. **Only those points follow**; the rest o
 | Modifier       | Function | Action                       |
 | ------------- | :--------: | --------------------------- |
 | -      |    Link points   | Select points and click. |
-| CMD/CTRL |  Add handle Nulls  | Adds In/Out Nulls to control the handles directly. Also works on already-linked points. |
+| CMD/CTRL |  Handle Nulls  | Adds In/Out Nulls to control the handles directly. With a point's Null selected, adds or removes its handle Nulls (no edit mode needed). The handles stay where they are. |
 | SHIFT |  Edit mode  | See **[below](#editmode)**. |
 | OPT/ALT |  Remove  | Removes the selected links (or all links on a selected path/layer). Points go back to their own animation. |
 | SHIFT + OPT/ALT |  Remove, keep positions  | Same, but keeps the points where the Nulls hold them at existing keyframes. |
@@ -113,12 +113,12 @@ The Nulls created by **Create Nulls to Follow Points**, **Points Follow Nulls** 
 - Their anchor point sits right on the point.
 - Their outlines keep the same thickness on screen at any scale.
 
-You can switch to real **Null layers**, and change their size, colors and stroke width, in [Settings > Control Nulls](interface.md#control-nulls).
+You can switch to real **Null layers**, and change their size, colors and stroke width, in [Settings > Control Nulls](interface.md#control-nulls), separately for Points Follow Nulls and for Nulls Follow Points / Trace.
 
 <h4  id="hidenulls">Hide Nulls</h4>
 
 <img src="assets/hide-nulls.svg" alt="Hide Nulls checkbox" width="140" style="max-width: 140px; height: auto;" />
 
-With shape layer Nulls, a **Hide Nulls** checkbox appears at the bottom of the Linking panel. It hides or shows every Control Null in the active comp. Hidden Nulls keep working: points, paths and parented groups still follow them.
+When either kind of Control Null uses shape layers, a **Hide Nulls** checkbox appears at the bottom of the Linking panel. It hides or shows every Control Null in the active comp, shape layers and real Nulls alike. Hidden Nulls keep working: points, paths and parented groups still follow them.
 
 If you toggled some of them by hand, the checkbox only flips the ones that need it.

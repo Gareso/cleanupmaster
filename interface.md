@@ -12,7 +12,7 @@
 ## Settings
 
 <img
-  src="assets/settings_updated.png"
+  src="assets/settings_updated_2.png"
   alt="Settings Panel"
   width="100%"
   style="max-width:400px; height:auto; align: center;"
@@ -32,14 +32,14 @@ At the top of the Settings dialog, a **Tool-wide options** section contains glob
 
 ### Control Nulls
 
-Sets up the Nulls created by **Create Nulls to Follow Points**, **Points Follow Nulls** and **Trace Path**. Changes apply to new Nulls and to the existing ones in the active comp.
+Sets up the Nulls the linking tools create, in two side-by-side sections so you can tell them apart: **Points Follow Nulls** on the left, **Nulls Follow Points / Trace** on the right. Each has the same options. Changes apply to new Nulls and to the existing ones in the active comp.
 
 | Option | Description |
 | ------ | ----------- |
 | **Null Layers / Shape Layers** | **Shape Layers** (default): small guide shape layers. No Solids in the project, even outlines at any scale, a line from each handle Null to its point, and a **Hide Nulls** checkbox in the Linking panel.<br>**Null Layers**: real Null layers, all sharing one Solid per kind. Hide them with the viewer's layer controls toggle. Switching only affects new Nulls. |
-| **Size (px)** | Size of the point Nulls. Handle Nulls are 40% of it. With Null Layers, this resizes every control Null of that kind in the project. |
+| **Size (px)** | Size of the Nulls. Handle Nulls are 40% of it. With Null Layers, this resizes every control Null of that kind in the project. |
 | **Stroke width** | Outline thickness (Shape Layers only). |
-| **Point color / Handle color** | Click a swatch to pick a color. With Null Layers, the Null uses the closest of your After Effects label colors. |
+| **Color** (Point / Handle color for Points Follow Nulls) | Click a swatch to pick a color. With Null Layers, the Null uses the closest of your After Effects label colors. |
 
 ### Feature Visibility
 
