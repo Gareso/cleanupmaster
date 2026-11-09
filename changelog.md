@@ -11,9 +11,9 @@
 
 - New tool: pins selected points to Nulls, including their handles. Other points keep their animation. Includes handle Nulls (CMD/CTRL) and an edit mode (SHIFT).
 
-<strong>:: CONTROL NULLS ::</strong>
+<strong>:: SHAPE LAYER NULLS ::</strong>
 
-- New option in Settings: linking tools can create small guide shape layers (no Solids in the project) or regular Nulls, with their own size and colors for each tool. Shape layers add a Hide Nulls checkbox.
+- Linking tools can now create shape layers instead of Nulls, so your project doesn't fill up with Solids. Choose in Settings, along with size and colors for each tool. A Hide Nulls checkbox in the Linking panel hides them all.
 
 <h3 style="color:#e94934">IMPROVED</h3>
 

@@ -119,6 +119,6 @@ You can switch to real **Null layers**, and change their size, colors and stroke
 
 <img src="assets/hide-nulls.svg" alt="Hide Nulls checkbox" width="140" style="max-width: 140px; height: auto;" />
 
-When either kind of Control Null uses shape layers, a **Hide Nulls** checkbox appears at the bottom of the Linking panel. It hides or shows every Control Null in the active comp, shape layers and real Nulls alike. Hidden Nulls keep working: points, paths and parented groups still follow them.
+The **Hide Nulls** checkbox at the bottom of the Linking panel hides or shows every Control Null in the active comp, shape layers and real Nulls alike. Unlike the viewer's layer controls toggle, it leaves paths and masks editable. Hidden Nulls keep working: points, paths and parented groups still follow them.
 
 If you toggled some of them by hand, the checkbox only flips the ones that need it.

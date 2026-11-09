@@ -36,7 +36,7 @@ Sets up the Nulls the linking tools create, in two side-by-side sections so you 
 
 | Option | Description |
 | ------ | ----------- |
-| **Null Layers / Shape Layers** | **Shape Layers** (default): small guide shape layers. No Solids in the project, even outlines at any scale, a line from each handle Null to its point, and a **Hide Nulls** checkbox in the Linking panel.<br>**Null Layers**: real Null layers, all sharing one Solid per kind. Hide them with the viewer's layer controls toggle. Switching only affects new Nulls. |
+| **Null Layers / Shape Layers** | **Shape Layers** (default): small guide shape layers. No Solids in the project, even outlines at any scale, and a line from each handle Null to its point.<br>**Null Layers**: real Null layers, all sharing one Solid per kind.<br>Switching only affects new Nulls. Either way, the **Hide Nulls** checkbox in the Linking panel hides them. |
 | **Size (px)** | Size of the Nulls. Handle Nulls are 40% of it. With Null Layers, this resizes every control Null of that kind in the project. |
 | **Stroke width** | Outline thickness (Shape Layers only). |
 | **Color** (Point / Handle color for Points Follow Nulls) | Click a swatch to pick a color. With Null Layers, the Null uses the closest of your After Effects label colors. |
